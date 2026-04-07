@@ -17,7 +17,7 @@ export function SingleFormatHero({
   headline,
   subheadline,
   ctaLabel = "Try It Free",
-  ctaHref = "/signup",
+  ctaHref = "/waitlist",
 }: SingleFormatHeroProps) {
   return (
     <section className="relative overflow-hidden bg-stone-950 pb-20 pt-20 sm:pt-28">

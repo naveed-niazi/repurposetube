@@ -18,7 +18,7 @@ export function BeforeAfter({
   subheadline = "Every video you make is already worth 6 pieces of content. You just need to stop writing them manually.",
   rows = BEFORE_AFTER_ROWS,
   totalBefore = "~5 hours",
-  ctaHref = "/signup",
+  ctaHref = "/waitlist",
   ctaLabel = "Start Saving Time Now",
 }: BeforeAfterProps) {
   return (

@@ -100,7 +100,7 @@ export default function PricingPage() {
               asChild
               className="h-12 bg-amber-500 px-8 text-base font-bold text-stone-950 hover:bg-amber-400"
             >
-              <Link href="/signup">Get Free Access Now</Link>
+              <Link href="/waitlist">Get Free Access Now</Link>
             </Button>
             <p className="mt-3 text-sm text-stone-600">No credit card required — ever, during beta</p>
           </div>
@@ -130,7 +130,7 @@ export default function PricingPage() {
                   asChild
                   className="shrink-0 bg-amber-500 px-6 font-bold text-stone-950 hover:bg-amber-400"
                 >
-                  <Link href="/signup">Start Free</Link>
+                  <Link href="/waitlist">Start Free</Link>
                 </Button>
               </div>
 
@@ -222,7 +222,7 @@ export default function PricingPage() {
               asChild
               className="bg-amber-500 px-8 text-base font-bold text-stone-950 hover:bg-amber-400"
             >
-              <Link href="/signup">Create Your Free Account</Link>
+              <Link href="/waitlist">Create Your Free Account</Link>
             </Button>
             <p className="mt-3 text-sm text-stone-600">No credit card · No trial · No catch</p>
           </div>

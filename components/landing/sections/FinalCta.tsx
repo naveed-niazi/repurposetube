@@ -14,7 +14,7 @@ export function FinalCta({
   headline,
   subheadline = "Join thousands of creators who spend less time writing and more time creating.",
   ctaLabel = "Get Started Free — No credit card needed",
-  ctaHref = "/signup",
+  ctaHref = "/waitlist",
 }: FinalCtaProps) {
   return (
     <section className="relative overflow-hidden bg-stone-950 py-28">
