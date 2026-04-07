@@ -63,3 +63,18 @@ When asked to commit:
 - The AI must perform scope/rules check, self-review, and quality gates first.
 - If checks cannot be executed, the AI must clearly report what could not be verified.
 - The AI should not claim completion unless required checks are done or explicitly waived by user.
+
+## 7) Confirmation Before Committing (Mandatory)
+
+The AI must NEVER run `git commit` without explicit user confirmation first.
+
+Before committing, the AI must:
+
+1. Show a summary of what will be committed (files changed, what each change does).
+2. Show the proposed commit message.
+3. Ask the user: "Ready to commit?" or equivalent.
+4. Only proceed after the user explicitly says yes (e.g. "yes", "commit it", "go ahead").
+
+This applies even when the user has just asked to "commit" — the AI must still surface the summary and message for approval before running the command.
+
+Do not skip this step for small or obvious changes.

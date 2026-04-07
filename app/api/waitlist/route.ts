@@ -1,21 +1,8 @@
 import { createClient } from "@supabase/supabase-js"
 import { NextResponse } from "next/server"
 
-/*
-  Run this SQL in your Supabase dashboard (SQL editor) once before deploying:
-
-  create table if not exists waitlist (
-    id          bigserial primary key,
-    email       text not null unique,
-    name        text,
-    role        text,
-    created_at  timestamptz not null default now()
-  );
-
-  Env vars required:
-    NEXT_PUBLIC_SUPABASE_URL      — your Supabase project URL
-    SUPABASE_SERVICE_ROLE_KEY     — service role key (Settings → API)
-*/
+// Schema managed via Prisma: prisma/schema.prisma → Waitlist model
+// Run `npx prisma migrate deploy` to apply migrations in production
 
 export async function POST(request: Request) {
   let body: unknown
