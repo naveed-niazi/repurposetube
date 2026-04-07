@@ -63,7 +63,7 @@ export default function YouTubeToShortsScriptPage() {
               badge: "YouTube → Shorts Scripts",
               headline: (
                 <>
-                  Turn One Long Video Into
+                  Turn One Long Video Into{" "}
                   <br />
                   <span className="text-amber-400">3 Shorts Scripts</span> Instantly
                 </>
@@ -75,7 +75,7 @@ export default function YouTubeToShortsScriptPage() {
             faqItems={FAQ}
             finalCtaHeadline={
               <>
-                Your long videos are hiding
+                Your long videos are hiding{" "}
                 <br />
                 <span className="text-amber-400">viral Shorts inside them</span>
               </>

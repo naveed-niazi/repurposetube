@@ -72,7 +72,7 @@ export default function RepurposeIoAlternativePage() {
               badge: "Repurpose.io Alternative",
               headline: (
                 <>
-                  Repurpose.io Moves Your Video.
+                  Repurpose.io Moves Your Video.{" "}
                   <br />
                   <span className="text-amber-400">RepurposeTube Writes Your Content.</span>
                 </>
@@ -87,7 +87,7 @@ export default function RepurposeIoAlternativePage() {
             faqItems={FAQ}
             finalCtaHeadline={
               <>
-                Get the written content
+                Get the written content{" "}
                 <br />
                 <span className="text-amber-400">your videos deserve</span>
               </>

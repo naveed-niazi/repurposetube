@@ -40,11 +40,12 @@ export function SingleFormatHero({
         </Badge>
 
         {/*
-          On mobile: hide all <br> so text flows naturally without orphans.
-          On sm+: restore <br> to use the intentional break points.
-          text-balance distributes text evenly within each resulting segment.
+          clamp() scales font continuously with viewport so even long headlines
+          stay in 2-3 lines on small screens without a hard mobile/sm jump.
+          [&>br]:hidden suppresses explicit breaks on mobile so text flows as
+          one block; sm:[&>br]:block restores them once there's room.
         */}
-        <h1 className="font-heading mb-5 text-[1.75rem] font-extrabold leading-[1.12] tracking-tight text-stone-50 text-balance [&>br]:hidden sm:text-[2.5rem] sm:[&>br]:block md:text-5xl">
+        <h1 className="font-heading mb-5 text-[clamp(1.25rem,6.25vw,3rem)] font-extrabold leading-[1.15] tracking-tight text-stone-50 text-pretty [&>br]:hidden sm:[&>br]:block">
           {headline}
         </h1>
 

@@ -63,7 +63,7 @@ export default function YouTubeToLinkedInPostPage() {
               badge: "YouTube → LinkedIn Post",
               headline: (
                 <>
-                  Turn Any YouTube Video Into
+                  Turn Any YouTube Video Into{" "}
                   <br />
                   a <span className="text-amber-400">High-Performing LinkedIn Post</span>
                 </>
@@ -75,7 +75,7 @@ export default function YouTubeToLinkedInPostPage() {
             faqItems={FAQ}
             finalCtaHeadline={
               <>
-                Your YouTube knowledge belongs
+                Your YouTube knowledge belongs{" "}
                 <br />
                 <span className="text-amber-400">on LinkedIn too</span>
               </>

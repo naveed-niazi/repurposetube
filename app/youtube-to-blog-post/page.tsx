@@ -67,7 +67,7 @@ export default function YouTubeToBlogPostPage() {
               badge: "YouTube → Blog Post",
               headline: (
                 <>
-                  Turn Any YouTube Video Into
+                  Turn Any YouTube Video Into{" "}
                   <br />
                   a <span className="text-amber-400">Full SEO Blog Post</span>
                 </>
@@ -79,7 +79,7 @@ export default function YouTubeToBlogPostPage() {
             faqItems={FAQ}
             finalCtaHeadline={
               <>
-                Every video you make is
+                Every video you make is{" "}
                 <br />
                 <span className="text-amber-400">already a blog post</span>
               </>

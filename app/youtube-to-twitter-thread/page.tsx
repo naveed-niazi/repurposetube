@@ -63,7 +63,7 @@ export default function YouTubeToTwitterThreadPage() {
               badge: "YouTube → Twitter / X Thread",
               headline: (
                 <>
-                  Turn Any YouTube Video Into
+                  Turn Any YouTube Video Into{" "}
                   <br />
                   a <span className="text-amber-400">Viral Twitter Thread</span>
                 </>
@@ -75,7 +75,7 @@ export default function YouTubeToTwitterThreadPage() {
             faqItems={FAQ}
             finalCtaHeadline={
               <>
-                Your best video ideas deserve
+                Your best video ideas deserve{" "}
                 <br />
                 <span className="text-amber-400">an audience on X too</span>
               </>

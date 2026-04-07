@@ -77,9 +77,9 @@ export default function HomePage() {
           <LandingHero
             headline={
               <>
-                One YouTube Video.
+                One YouTube Video.{" "}
                 <br />
-                <span className="text-amber-400">Six Content Formats.</span>
+                <span className="text-amber-400">Six Content Formats.</span>{" "}
                 <br />
                 Sixty Seconds.
               </>
@@ -96,7 +96,7 @@ export default function HomePage() {
           <FinalCta
             headline={
               <>
-                Your next video deserves
+                Your next video deserves{" "}
                 <br />
                 more than one platform
               </>

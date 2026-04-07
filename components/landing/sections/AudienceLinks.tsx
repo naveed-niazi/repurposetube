@@ -51,7 +51,7 @@ export function AudienceLinks({
     <section className="bg-white py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mb-12 text-center">
-          <h2 className="font-heading mb-4 text-3xl font-extrabold tracking-tight text-stone-900 sm:text-4xl">
+          <h2 className="font-heading mb-4 text-2xl font-extrabold tracking-tight text-stone-900 text-pretty sm:text-4xl">
             {headline}
           </h2>
           <p className="mx-auto max-w-xl text-base text-stone-500">{subheadline}</p>

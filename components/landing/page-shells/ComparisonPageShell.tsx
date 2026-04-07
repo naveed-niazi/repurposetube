@@ -5,6 +5,7 @@ import { OutputFormatsGrid } from "@/components/landing/sections/OutputFormatsGr
 import { AlsoCompare } from "@/components/landing/sections/AlsoCompare"
 import { FaqSection } from "@/components/landing/sections/FaqSection"
 import { FinalCta } from "@/components/landing/sections/FinalCta"
+import { COMPARISON_CONTENT } from "@/lib/page-content"
 import type { FaqItem } from "@/lib/landing-data"
 import type { ReactNode } from "react"
 
@@ -28,6 +29,8 @@ export function ComparisonPageShell({
   faqItems,
   finalCtaHeadline,
 }: ComparisonPageShellProps) {
+  const content = COMPARISON_CONTENT[currentSlug]
+
   return (
     <>
       <SingleFormatHero {...hero} />
@@ -36,7 +39,11 @@ export function ComparisonPageShell({
         headline={comparisonHeadline}
         features={features}
       />
-      <DifferentiatorGrid />
+      <DifferentiatorGrid
+        headline={content?.differentiatorHeadline}
+        subheadline={content?.differentiatorSubheadline}
+        items={content?.differentiators}
+      />
       <OutputFormatsGrid withLinks />
       <AlsoCompare currentSlug={currentSlug} />
       <FaqSection items={faqItems} />

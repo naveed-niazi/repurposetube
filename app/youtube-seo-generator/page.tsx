@@ -68,7 +68,7 @@ export default function YouTubeSeoGeneratorPage() {
               badge: "YouTube SEO Package",
               headline: (
                 <>
-                  Generate Your YouTube Title,
+                  Generate Your YouTube Title,{" "}
                   <br />
                   <span className="text-amber-400">Description & Tags</span> in 60 Seconds
                 </>
@@ -80,7 +80,7 @@ export default function YouTubeSeoGeneratorPage() {
             faqItems={FAQ}
             finalCtaHeadline={
               <>
-                Stop guessing your way through
+                Stop guessing your way through{" "}
                 <br />
                 <span className="text-amber-400">YouTube SEO</span>
               </>

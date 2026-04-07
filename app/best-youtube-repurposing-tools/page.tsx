@@ -117,7 +117,7 @@ export default function BestYouTubeRepurposingToolsPage() {
             badge="Tool Comparison · 2025"
             headline={
               <>
-                The Best YouTube Content
+                The Best YouTube Content{" "}
                 <br />
                 <span className="text-amber-400">Repurposing Tools</span> Compared
               </>
@@ -187,7 +187,7 @@ export default function BestYouTubeRepurposingToolsPage() {
           <FinalCta
             headline={
               <>
-                The best YouTube repurposing tool
+                The best YouTube repurposing tool{" "}
                 <br />
                 <span className="text-amber-400">is the one you actually use</span>
               </>

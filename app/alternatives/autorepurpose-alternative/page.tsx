@@ -77,7 +77,7 @@ export default function AutoRepurposeAlternativePage() {
               badge: "AutoRepurpose Alternative",
               headline: (
                 <>
-                  AutoRepurpose Does 3 Formats.
+                  AutoRepurpose Does 3 Formats.{" "}
                   <br />
                   <span className="text-amber-400">RepurposeTube Does 6.</span>
                 </>
@@ -92,7 +92,7 @@ export default function AutoRepurposeAlternativePage() {
             faqItems={FAQ}
             finalCtaHeadline={
               <>
-                Get all 6 formats,
+                Get all 6 formats,{" "}
                 <br />
                 <span className="text-amber-400">not just 3</span>
               </>

@@ -77,7 +77,7 @@ export default function CastmagicAlternativePage() {
               badge: "Castmagic Alternative",
               headline: (
                 <>
-                  The Castmagic Alternative
+                  The Castmagic Alternative{" "}
                   <br />
                   <span className="text-amber-400">Built for YouTubers</span>
                 </>
@@ -92,7 +92,7 @@ export default function CastmagicAlternativePage() {
             faqItems={FAQ}
             finalCtaHeadline={
               <>
-                YouTube-first repurposing,
+                YouTube-first repurposing,{" "}
                 <br />
                 <span className="text-amber-400">not podcast tools retrofitted</span>
               </>

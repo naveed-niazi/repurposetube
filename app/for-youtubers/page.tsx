@@ -97,11 +97,12 @@ export default function ForYouTubersPage() {
         <Navbar variant="page" />
         <main className="flex-1">
           <AudiencePageShell
+            contentKey="youtubers"
             hero={{
               badge: "For YouTubers",
               headline: (
                 <>
-                  More Platforms. Same Video.
+                  More Platforms. Same Video.{" "}
                   <br />
                   <span className="text-amber-400">No Extra Work.</span>
                 </>
@@ -115,7 +116,7 @@ export default function ForYouTubersPage() {
             faqItems={FAQ}
             finalCtaHeadline={
               <>
-                Your next video is already
+                Your next video is already{" "}
                 <br />
                 <span className="text-amber-400">6 pieces of content</span>
               </>

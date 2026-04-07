@@ -97,11 +97,12 @@ export default function ForSolopreneursPage() {
         <Navbar variant="page" />
         <main className="flex-1">
           <AudiencePageShell
+            contentKey="solopreneurs"
             hero={{
               badge: "For Solopreneurs",
               headline: (
                 <>
-                  A Content Team You Can&apos;t Afford.
+                  A Content Team You Can&apos;t Afford.{" "}
                   <br />
                   <span className="text-amber-400">In 60 Seconds.</span>
                 </>
@@ -115,7 +116,7 @@ export default function ForSolopreneursPage() {
             faqItems={FAQ}
             finalCtaHeadline={
               <>
-                Stop writing content.
+                Stop writing content.{" "}
                 <br />
                 <span className="text-amber-400">Start repurposing it.</span>
               </>

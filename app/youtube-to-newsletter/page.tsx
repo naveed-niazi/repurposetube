@@ -63,7 +63,7 @@ export default function YouTubeToNewsletterPage() {
               badge: "YouTube → Newsletter Email",
               headline: (
                 <>
-                  Turn Your YouTube Video Into a
+                  Turn Your YouTube Video Into a{" "}
                   <br />
                   <span className="text-amber-400">Ready-to-Send Newsletter</span>
                 </>
@@ -75,7 +75,7 @@ export default function YouTubeToNewsletterPage() {
             faqItems={FAQ}
             finalCtaHeadline={
               <>
-                Never stare at a blank
+                Never stare at a blank{" "}
                 <br />
                 <span className="text-amber-400">newsletter draft</span> again
               </>

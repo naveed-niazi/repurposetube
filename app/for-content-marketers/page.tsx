@@ -97,11 +97,12 @@ export default function ForContentMarketersPage() {
         <Navbar variant="page" />
         <main className="flex-1">
           <AudiencePageShell
+            contentKey="content-marketers"
             hero={{
               badge: "For Content Marketers",
               headline: (
                 <>
-                  Turn One YouTube Video Into
+                  Turn One YouTube Video Into{" "}
                   <br />
                   <span className="text-amber-400">a Full Content Campaign</span>
                 </>
@@ -115,7 +116,7 @@ export default function ForContentMarketersPage() {
             faqItems={FAQ}
             finalCtaHeadline={
               <>
-                Turn every video into
+                Turn every video into{" "}
                 <br />
                 <span className="text-amber-400">a full campaign in 60 seconds</span>
               </>

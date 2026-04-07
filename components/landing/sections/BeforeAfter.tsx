@@ -25,7 +25,7 @@ export function BeforeAfter({
     <section className="bg-stone-950 py-24">
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
         <div className="mb-12 text-center">
-          <h2 className="font-heading mb-4 text-3xl font-extrabold tracking-tight text-stone-50 sm:text-4xl">
+          <h2 className="font-heading mb-4 text-2xl font-extrabold tracking-tight text-stone-50 text-pretty sm:text-4xl">
             {headline}
           </h2>
           <p className="text-stone-400">{subheadline}</p>

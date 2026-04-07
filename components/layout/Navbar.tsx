@@ -98,6 +98,13 @@ export function Navbar({ variant = "home" }: NavbarProps) {
           </Link>
 
           <Link
+            href="/pricing"
+            className="rounded-md px-3 py-2 transition-colors hover:bg-stone-900 hover:text-stone-100"
+          >
+            Pricing
+          </Link>
+
+          <Link
             href={`${prefix}#faq`}
             className="rounded-md px-3 py-2 transition-colors hover:bg-stone-900 hover:text-stone-100"
           >

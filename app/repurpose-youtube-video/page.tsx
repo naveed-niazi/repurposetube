@@ -69,7 +69,7 @@ export default function RepurposeYouTubeVideoPage() {
             badge="YouTube Content Repurposing"
             headline={
               <>
-                Repurpose Any YouTube Video Into
+                Repurpose Any YouTube Video Into{" "}
                 <br />
                 <span className="text-amber-400">6 Content Formats</span> in 60 Seconds
               </>
@@ -84,7 +84,7 @@ export default function RepurposeYouTubeVideoPage() {
           <FinalCta
             headline={
               <>
-                Start repurposing your
+                Start repurposing your{" "}
                 <br />
                 <span className="text-amber-400">first video today</span>
               </>

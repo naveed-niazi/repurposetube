@@ -25,10 +25,9 @@ const COMPARE = [
 ]
 
 const COMPANY = [
-  { href: "/blog", label: "Blog" },
   { href: "/pricing", label: "Pricing" },
-  { href: "/privacy", label: "Privacy" },
-  { href: "/terms", label: "Terms" },
+  { href: "/privacy", label: "Privacy Policy" },
+  { href: "/terms", label: "Terms of Service" },
 ]
 
 function FooterCol({ heading, links }: { heading: string; links: { href: string; label: string }[] }) {

@@ -22,7 +22,7 @@ export function FinalCta({
         <div className="size-[600px] rounded-full bg-amber-500/6 blur-[100px]" />
       </div>
       <div className="relative mx-auto max-w-2xl px-4 text-center sm:px-6">
-        <h2 className="font-heading mb-4 text-3xl font-extrabold tracking-tight text-stone-50 sm:text-4xl lg:text-5xl">
+        <h2 className="font-heading mb-4 text-[clamp(1.25rem,6.25vw,3rem)] font-extrabold leading-[1.15] tracking-tight text-stone-50 text-pretty [&>br]:hidden sm:[&>br]:block">
           {headline}
         </h2>
         <p className="mb-10 text-lg text-stone-400">{subheadline}</p>

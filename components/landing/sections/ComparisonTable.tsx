@@ -28,7 +28,7 @@ export function ComparisonTable({
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
         {headline && (
           <div className="mb-12 text-center">
-            <h2 className="font-heading mb-3 text-3xl font-extrabold tracking-tight text-stone-50 sm:text-4xl">
+            <h2 className="font-heading mb-3 text-2xl font-extrabold tracking-tight text-stone-50 text-pretty sm:text-4xl">
               {headline}
             </h2>
           </div>
