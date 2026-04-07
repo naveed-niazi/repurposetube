@@ -71,6 +71,14 @@ export const metadata: Metadata = {
       "One YouTube URL → 6 content formats in 60 seconds. Blog post, Twitter thread, LinkedIn post, YouTube SEO package, newsletter, and Shorts scripts — all in parallel.",
     images: ["/og-image.png"],
   },
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+    other: [{ rel: "manifest", url: "/site.webmanifest" }],
+  },
   robots: {
     index: true,
     follow: true,

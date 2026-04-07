@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -28,7 +29,14 @@ export function Navbar({ variant = "home" }: NavbarProps) {
     <header className="sticky top-0 z-50 border-b border-stone-800/60 bg-stone-950/95 backdrop-blur-sm">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         {/* Logo */}
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="flex items-center gap-2">
+          <Image
+            src="/favicon.svg"
+            alt="RepurposeTube logo"
+            width={28}
+            height={28}
+            className="shrink-0"
+          />
           <span className="font-heading text-lg font-bold tracking-tight text-stone-100">
             Repurpose<span className="text-amber-400">Tube</span>
           </span>
