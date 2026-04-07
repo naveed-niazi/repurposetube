@@ -79,12 +79,12 @@ export default function HomePage() {
               <>
                 One YouTube Video.
                 <br />
-                <span className="text-amber-400">Six Platforms</span> Worth of Content.
-                <br className="hidden sm:block" />
+                <span className="text-amber-400">Six Content Formats.</span>
+                <br />
                 Sixty Seconds.
               </>
             }
-            subheadline="Most creators post once and move on. RepurposeTube turns every video into a blog post, Twitter/X thread, LinkedIn post, YouTube SEO package, newsletter, and Shorts scripts — all generated in parallel the moment you paste a URL."
+            subheadline="Paste a YouTube URL and get a blog post, Twitter thread, LinkedIn post, YouTube SEO package, newsletter, and Shorts scripts — all generated in parallel in under 60 seconds."
           />
           <OutputFormatsGrid withLinks />
           <BeforeAfter />

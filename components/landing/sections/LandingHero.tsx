@@ -47,7 +47,7 @@ export function LandingHero({
           {badge}
         </Badge>
 
-        <h1 className="font-heading mb-6 text-[2rem] font-extrabold leading-[1.1] tracking-tight text-stone-50 text-balance [&>br]:hidden sm:text-5xl sm:[&>br]:block lg:text-[3.75rem]">
+        <h1 className="font-heading mb-6 text-[1.75rem] font-extrabold leading-[1.12] tracking-tight text-stone-50 text-balance [&>br]:hidden sm:text-5xl sm:[&>br]:block lg:text-[3.75rem]">
           {headline}
         </h1>
 

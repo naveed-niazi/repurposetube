@@ -19,18 +19,18 @@ export function HeroForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="mx-auto flex max-w-2xl flex-col gap-3 sm:flex-row">
+    <form onSubmit={handleSubmit} className="mx-auto flex max-w-xl flex-col gap-3 sm:flex-row sm:max-w-2xl">
       <input
         type="url"
-        placeholder="https://youtube.com/watch?v=..."
+        placeholder="Paste a YouTube URL..."
         value={url}
         onChange={(e) => setUrl(e.target.value)}
-        className="h-13 flex-1 rounded-lg border border-stone-700 bg-stone-900 px-4 text-base text-stone-100 placeholder:text-stone-500 outline-none transition-colors focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20"
+        className="h-12 flex-1 rounded-xl border border-stone-700 bg-stone-900 px-4 text-base text-stone-100 placeholder:text-stone-500 outline-none transition-colors focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20"
       />
       <Button
         type="submit"
         disabled={loading}
-        className="h-13 shrink-0 px-6 text-base font-semibold"
+        className="h-12 shrink-0 rounded-xl bg-amber-500 px-6 text-base font-semibold text-stone-950 hover:bg-amber-400"
       >
         {loading ? (
           <Loader2 className="mr-2 size-4 animate-spin" />
