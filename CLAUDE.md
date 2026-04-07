@@ -1,2 +1,12 @@
 @AGENTS.md
-@MVP_SCOPE.md
+@docs/ai/README.md
+@docs/ai/MVP_SCOPE.md
+@docs/ai/ENGINEERING_GUARDRAILS.md
+@docs/ai/ARCHITECTURE_DECISIONS.md
+@docs/ai/API_CONTRACTS.md
+@docs/ai/DATABASE_RULES.md
+@docs/ai/TESTING_DEFINITION.md
+@docs/ai/UI_SYSTEM_RULES.md
+@docs/ai/OBSERVABILITY_AND_ERRORS.md
+@docs/ai/PR_COMMIT_WORKFLOW.md
+@docs/ai/SEO_LANDING_PAGES_TASK.md

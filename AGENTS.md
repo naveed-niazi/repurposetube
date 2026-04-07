@@ -5,5 +5,6 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 ## Product scope reference
 
-Before implementing product work, follow `MVP_SCOPE.md` as the source of truth for MVP features and scope boundaries.
+Before implementing product work, follow `docs/ai/MVP_SCOPE.md` as the source of truth for MVP features and scope boundaries.
+`docs/ai/MVP_SCOPE.md` also contains mandatory AI implementation stack instructions that must be followed.
 <!-- END:nextjs-agent-rules -->
