@@ -34,16 +34,21 @@ export function SingleFormatHero({
         }}
       />
 
-      <div className="relative mx-auto max-w-3xl px-4 text-center sm:px-6">
+      <div className="relative mx-auto max-w-3xl px-5 text-center sm:px-8">
         <Badge className="mb-6 border border-amber-500/30 bg-amber-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-amber-400">
           {badge}
         </Badge>
 
-        <h1 className="font-heading mb-5 text-4xl font-extrabold leading-[1.08] tracking-tight text-stone-50 sm:text-5xl">
+        {/*
+          On mobile: hide all <br> so text flows naturally without orphans.
+          On sm+: restore <br> to use the intentional break points.
+          text-balance distributes text evenly within each resulting segment.
+        */}
+        <h1 className="font-heading mb-5 text-[1.75rem] font-extrabold leading-[1.12] tracking-tight text-stone-50 text-balance [&>br]:hidden sm:text-[2.5rem] sm:[&>br]:block md:text-5xl">
           {headline}
         </h1>
 
-        <p className="mx-auto mb-8 max-w-xl text-lg leading-relaxed text-stone-400">
+        <p className="mx-auto mb-8 max-w-lg text-base leading-relaxed text-stone-400 text-pretty sm:text-lg">
           {subheadline}
         </p>
 

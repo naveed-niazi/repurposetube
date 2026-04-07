@@ -49,7 +49,7 @@ export function OutputFormatsGrid({
                     <Icon className={`size-6 ${f.iconColor}`} />
                   </div>
                   <CardTitle className="font-heading text-base font-bold text-stone-900">
-                    {f.label}
+                    {withLinks && !isHighlighted ? f.fullLabel : f.label}
                     {isHighlighted && (
                       <span className="ml-2 rounded-full bg-amber-100 px-2 py-0.5 text-xs font-semibold text-amber-700">
                         This page
@@ -67,7 +67,12 @@ export function OutputFormatsGrid({
 
             if (withLinks && !isHighlighted) {
               return (
-                <Link key={f.slug} href={f.href} className="block">
+                <Link
+                  key={f.slug}
+                  href={f.href}
+                  title={`${f.fullLabel} Generator — RepurposeTube`}
+                  className="block"
+                >
                   {card}
                 </Link>
               )

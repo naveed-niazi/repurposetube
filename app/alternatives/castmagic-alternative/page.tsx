@@ -86,6 +86,7 @@ export default function CastmagicAlternativePage() {
                 "Castmagic is great for podcasters. But if your content lives on YouTube, you shouldn't need to download audio files before repurposing. RepurposeTube works from a URL — nothing else.",
             }}
             competitorName="Castmagic"
+            currentSlug="castmagic"
             comparisonHeadline="RepurposeTube vs Castmagic — feature by feature"
             features={FEATURES}
             faqItems={FAQ}

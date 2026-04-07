@@ -18,6 +18,8 @@ import type { ElementType } from "react"
 export interface OutputFormat {
   icon: ElementType
   label: string
+  /** Keyword-rich label used as anchor text in links, e.g. "YouTube to Blog Post" */
+  fullLabel: string
   iconColor: string
   iconBg: string
   description: string
@@ -53,6 +55,7 @@ export const OUTPUT_FORMATS: OutputFormat[] = [
   {
     icon: FileText,
     label: "Blog Post",
+    fullLabel: "YouTube to Blog Post",
     iconColor: "text-blue-600",
     iconBg: "bg-blue-50",
     slug: "blog-post",
@@ -63,6 +66,7 @@ export const OUTPUT_FORMATS: OutputFormat[] = [
   {
     icon: MessageSquare,
     label: "Twitter / X Thread",
+    fullLabel: "YouTube to Twitter Thread",
     iconColor: "text-sky-600",
     iconBg: "bg-sky-50",
     slug: "twitter-thread",
@@ -73,6 +77,7 @@ export const OUTPUT_FORMATS: OutputFormat[] = [
   {
     icon: Briefcase,
     label: "LinkedIn Post",
+    fullLabel: "YouTube to LinkedIn Post",
     iconColor: "text-indigo-600",
     iconBg: "bg-indigo-50",
     slug: "linkedin-post",
@@ -83,6 +88,7 @@ export const OUTPUT_FORMATS: OutputFormat[] = [
   {
     icon: TrendingUp,
     label: "YouTube SEO Package",
+    fullLabel: "YouTube SEO Generator",
     iconColor: "text-amber-600",
     iconBg: "bg-amber-50",
     slug: "youtube-seo",
@@ -93,6 +99,7 @@ export const OUTPUT_FORMATS: OutputFormat[] = [
   {
     icon: Mail,
     label: "Newsletter Email",
+    fullLabel: "YouTube to Newsletter",
     iconColor: "text-emerald-600",
     iconBg: "bg-emerald-50",
     slug: "newsletter",
@@ -103,6 +110,7 @@ export const OUTPUT_FORMATS: OutputFormat[] = [
   {
     icon: Clapperboard,
     label: "Shorts Scripts",
+    fullLabel: "YouTube to Shorts Scripts",
     iconColor: "text-violet-600",
     iconBg: "bg-violet-50",
     slug: "shorts-scripts",

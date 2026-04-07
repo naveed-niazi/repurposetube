@@ -6,6 +6,8 @@ import { OutputFormatsGrid } from "@/components/landing/sections/OutputFormatsGr
 import { BeforeAfter } from "@/components/landing/sections/BeforeAfter"
 import { HowItWorks } from "@/components/landing/sections/HowItWorks"
 import { DifferentiatorGrid } from "@/components/landing/sections/DifferentiatorGrid"
+import { AudienceLinks } from "@/components/landing/sections/AudienceLinks"
+import { CompareTeaser } from "@/components/landing/sections/CompareTeaser"
 import { FaqSection } from "@/components/landing/sections/FaqSection"
 import { FinalCta } from "@/components/landing/sections/FinalCta"
 import { HOMEPAGE_FAQ } from "@/lib/landing-data"
@@ -87,7 +89,9 @@ export default function HomePage() {
           <OutputFormatsGrid withLinks />
           <BeforeAfter />
           <HowItWorks />
+          <AudienceLinks />
           <DifferentiatorGrid />
+          <CompareTeaser />
           <FaqSection items={HOMEPAGE_FAQ} />
           <FinalCta
             headline={

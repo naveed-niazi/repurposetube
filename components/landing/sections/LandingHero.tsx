@@ -42,26 +42,26 @@ export function LandingHero({
         }}
       />
 
-      <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6">
+      <div className="relative mx-auto max-w-4xl px-5 text-center sm:px-8">
         <Badge className="mb-6 border border-amber-500/30 bg-amber-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-amber-400">
           {badge}
         </Badge>
 
-        <h1 className="font-heading mb-6 text-4xl font-extrabold leading-[1.08] tracking-tight text-stone-50 sm:text-5xl lg:text-[3.75rem]">
+        <h1 className="font-heading mb-6 text-[2rem] font-extrabold leading-[1.1] tracking-tight text-stone-50 text-balance [&>br]:hidden sm:text-5xl sm:[&>br]:block lg:text-[3.75rem]">
           {headline}
         </h1>
 
-        <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-stone-400 sm:text-xl">
+        <p className="mx-auto mb-10 max-w-xl text-base leading-relaxed text-stone-400 text-pretty sm:text-lg">
           {subheadline}
         </p>
 
         <HeroForm />
 
         {/* Stats strip */}
-        <div className="mx-auto mt-8 inline-flex flex-wrap items-center justify-center gap-6 rounded-xl border border-stone-800 bg-stone-900/60 px-6 py-3 text-sm text-stone-400">
+        <div className="mx-auto mt-8 inline-flex flex-wrap items-center justify-center gap-4 rounded-xl border border-stone-800 bg-stone-900/60 px-5 py-3 text-sm text-stone-400 sm:gap-6">
           {stats.map((s) => (
             <span key={s.label} className="flex items-center gap-2">
-              <span className="font-heading text-lg font-bold text-amber-400">{s.value}</span>
+              <span className="font-heading text-base font-bold text-amber-400 sm:text-lg">{s.value}</span>
               {s.label}
             </span>
           ))}

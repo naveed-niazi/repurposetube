@@ -86,6 +86,7 @@ export default function AutoRepurposeAlternativePage() {
                 "AutoRepurpose covers Twitter, LinkedIn, and newsletters. RepurposeTube adds a full blog post, YouTube SEO package, and Shorts scripts — all in one run, all in parallel.",
             }}
             competitorName="AutoRepurpose"
+            currentSlug="autorepurpose"
             comparisonHeadline="RepurposeTube vs AutoRepurpose — feature by feature"
             features={FEATURES}
             faqItems={FAQ}

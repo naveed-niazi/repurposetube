@@ -81,6 +81,7 @@ export default function RepurposeIoAlternativePage() {
                 "Repurpose.io is a distribution tool — it doesn't generate text. RepurposeTube takes your YouTube URL and writes everything: blog post, Twitter thread, LinkedIn post, newsletter, Shorts scripts, and YouTube SEO package.",
             }}
             competitorName="Repurpose.io"
+            currentSlug="repurpose-io"
             comparisonHeadline="RepurposeTube vs Repurpose.io — what each actually does"
             features={FEATURES}
             faqItems={FAQ}
