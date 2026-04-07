@@ -1,65 +1,106 @@
-import Image from "next/image";
+import type { Metadata } from "next"
+import { Navbar } from "@/components/layout/Navbar"
+import { Footer } from "@/components/layout/Footer"
+import { LandingHero } from "@/components/landing/sections/LandingHero"
+import { OutputFormatsGrid } from "@/components/landing/sections/OutputFormatsGrid"
+import { BeforeAfter } from "@/components/landing/sections/BeforeAfter"
+import { HowItWorks } from "@/components/landing/sections/HowItWorks"
+import { DifferentiatorGrid } from "@/components/landing/sections/DifferentiatorGrid"
+import { FaqSection } from "@/components/landing/sections/FaqSection"
+import { FinalCta } from "@/components/landing/sections/FinalCta"
+import { HOMEPAGE_FAQ } from "@/lib/landing-data"
+import { buildFaqJsonLd, schemaWebSite, schemaOrganization, schemaWebApp } from "@/lib/seo"
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: {
+    default: "RepurposeTube — Turn Any YouTube Video Into 6 Content Formats Instantly",
+    template: "%s | RepurposeTube",
+  },
+  description:
+    "Paste a YouTube URL and RepurposeTube generates a blog post, Twitter/X thread, LinkedIn post, YouTube SEO package, newsletter email, and Shorts scripts — all in parallel using AI. Free to start, no credit card needed.",
+  keywords: [
+    "youtube repurposing tool",
+    "repurpose youtube video",
+    "youtube to blog post",
+    "youtube to twitter thread",
+    "youtube to linkedin post",
+    "youtube seo generator",
+    "youtube content repurposing",
+    "ai content repurposing tool",
+    "youtube transcript to content",
+    "youtube to newsletter",
+    "youtube to shorts script",
+  ],
+  authors: [{ name: "RepurposeTube", url: "https://repurposetube.com" }],
+  creator: "RepurposeTube",
+  publisher: "RepurposeTube",
+  metadataBase: new URL("https://repurposetube.com"),
+  alternates: { canonical: "https://repurposetube.com" },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://repurposetube.com",
+    siteName: "RepurposeTube",
+    title: "RepurposeTube — Turn Any YouTube Video Into 6 Content Formats Instantly",
+    description:
+      "Paste a YouTube URL and get a blog post, Twitter/X thread, LinkedIn post, YouTube SEO package, newsletter, and Shorts scripts — all generated in parallel. Free to start.",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "RepurposeTube — One YouTube URL, 6 Content Formats, 60 Seconds" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@repurposetube",
+    creator: "@repurposetube",
+    title: "RepurposeTube — Turn Any YouTube Video Into 6 Content Formats",
+    description: "One YouTube URL → 6 content formats in 60 seconds. Blog post, Twitter thread, LinkedIn post, YouTube SEO package, newsletter, and Shorts scripts.",
+    images: ["/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-video-preview": -1, "max-image-preview": "large", "max-snippet": -1 },
+  },
+}
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaWebSite) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrganization) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaWebApp) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildFaqJsonLd(HOMEPAGE_FAQ)) }} />
+
+      <div className="flex min-h-screen flex-col">
+        <Navbar variant="home" />
+        <main className="flex-1">
+          <LandingHero
+            headline={
+              <>
+                One YouTube Video.
+                <br />
+                <span className="text-amber-400">Six Platforms</span> Worth of Content.
+                <br className="hidden sm:block" />
+                Sixty Seconds.
+              </>
+            }
+            subheadline="Most creators post once and move on. RepurposeTube turns every video into a blog post, Twitter/X thread, LinkedIn post, YouTube SEO package, newsletter, and Shorts scripts — all generated in parallel the moment you paste a URL."
+          />
+          <OutputFormatsGrid withLinks />
+          <BeforeAfter />
+          <HowItWorks />
+          <DifferentiatorGrid />
+          <FaqSection items={HOMEPAGE_FAQ} />
+          <FinalCta
+            headline={
+              <>
+                Your next video deserves
+                <br />
+                more than one platform
+              </>
+            }
+          />
+        </main>
+        <Footer />
+      </div>
+    </>
+  )
 }
