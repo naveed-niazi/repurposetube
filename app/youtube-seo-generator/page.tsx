@@ -70,7 +70,7 @@ export default function YouTubeSeoGeneratorPage() {
                 <>
                   Generate Your YouTube Title,{" "}
                   <br />
-                  <span className="text-amber-400">Description & Tags</span> in 60 Seconds
+                  <span className="text-brand-400">Description & Tags</span> in 60 Seconds
                 </>
               ),
               subheadline:
@@ -82,7 +82,7 @@ export default function YouTubeSeoGeneratorPage() {
               <>
                 Stop guessing your way through{" "}
                 <br />
-                <span className="text-amber-400">YouTube SEO</span>
+                <span className="text-brand-400">YouTube SEO</span>
               </>
             }
             finalCtaSubheadline="Let Remi write titles, descriptions, and tags that are grounded in what your video actually says."

@@ -70,7 +70,7 @@ export default function YouTubeToAllContentFormatsPage() {
               <>
                 One YouTube Video.{" "}
                 <br />
-                <span className="text-amber-400">Every Content Format.</span>{" "}
+                <span className="text-brand-400">Every Content Format.</span>{" "}
                 <br />
                 Simultaneously.
               </>
@@ -98,7 +98,7 @@ export default function YouTubeToAllContentFormatsPage() {
             headline={
               <>
                 One video.{" "}
-                <span className="text-amber-400">Six platforms.</span>{" "}
+                <span className="text-brand-400">Six platforms.</span>{" "}
                 <br />
                 Sixty seconds.
               </>

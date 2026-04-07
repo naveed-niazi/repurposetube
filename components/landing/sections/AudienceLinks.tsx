@@ -65,10 +65,10 @@ export function AudienceLinks({
                 key={item.href}
                 href={item.href}
                 title={`${item.cta} — Content Repurposing for ${item.label}`}
-                className="group flex flex-col gap-4 rounded-2xl border border-stone-200 bg-stone-50 p-7 transition-all duration-200 hover:border-amber-300 hover:bg-amber-50/30 hover:shadow-md"
+                className="group flex flex-col gap-4 rounded-2xl border border-stone-200 bg-stone-50 p-7 transition-all duration-200 hover:border-brand-300 hover:bg-brand-50/30 hover:shadow-md"
               >
                 <div className="flex items-center gap-3">
-                  <div className="flex size-10 items-center justify-center rounded-xl bg-amber-100 text-amber-600">
+                  <div className="flex size-10 items-center justify-center rounded-xl bg-brand-100 text-brand-600">
                     <Icon className="size-5" />
                   </div>
                   <span className="text-xs font-semibold uppercase tracking-widest text-stone-400">
@@ -79,7 +79,7 @@ export function AudienceLinks({
                   <h3 className="font-heading mb-1.5 text-lg font-bold text-stone-900">{item.headline}</h3>
                   <p className="text-sm leading-relaxed text-stone-500">{item.body}</p>
                 </div>
-                <div className="mt-auto flex items-center gap-1 text-sm font-medium text-amber-600 transition-colors group-hover:text-amber-500">
+                <div className="mt-auto flex items-center gap-1 text-sm font-medium text-brand-600 transition-colors group-hover:text-brand-500">
                   {item.cta}
                   <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
                 </div>

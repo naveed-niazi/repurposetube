@@ -70,7 +70,7 @@ export default function WaitlistPage() {
         <section className="relative overflow-hidden py-24 sm:py-32">
           {/* Glow */}
           <div className="pointer-events-none absolute inset-0 flex items-start justify-center overflow-hidden">
-            <div className="mt-16 size-[700px] rounded-full bg-amber-500/[0.07] blur-[120px]" />
+            <div className="mt-16 size-[700px] rounded-full bg-brand-500/[0.07] blur-[120px]" />
           </div>
           {/* Dot grid */}
           <div
@@ -87,8 +87,8 @@ export default function WaitlistPage() {
               /* ── Success state ── */
               <div className="text-center">
                 <div className="mb-6 flex justify-center">
-                  <div className="flex size-16 items-center justify-center rounded-full bg-amber-500/10 ring-1 ring-amber-500/30">
-                    <Check className="size-8 text-amber-400" />
+                  <div className="flex size-16 items-center justify-center rounded-full bg-brand-500/10 ring-1 ring-brand-500/30">
+                    <Check className="size-8 text-brand-400" />
                   </div>
                 </div>
                 <h1 className="font-heading mb-3 text-3xl font-extrabold tracking-tight text-stone-50 sm:text-4xl">
@@ -99,7 +99,7 @@ export default function WaitlistPage() {
                 </p>
 
                 <div className="mb-10 rounded-xl border border-stone-800 bg-stone-900/60 p-5 text-left">
-                  <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-amber-400">What to expect</p>
+                  <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-brand-400">What to expect</p>
                   <ul className="space-y-2.5">
                     {[
                       "Access email with your personal signup link",
@@ -108,7 +108,7 @@ export default function WaitlistPage() {
                       "No card required during beta",
                     ].map((item) => (
                       <li key={item} className="flex items-start gap-2.5 text-sm text-stone-400">
-                        <Check className="mt-0.5 size-3.5 shrink-0 text-amber-400" />
+                        <Check className="mt-0.5 size-3.5 shrink-0 text-brand-400" />
                         {item}
                       </li>
                     ))}
@@ -126,7 +126,7 @@ export default function WaitlistPage() {
                     <Link
                       key={l.href}
                       href={l.href}
-                      className="rounded-full border border-stone-700 bg-stone-900 px-3 py-1.5 text-xs text-stone-400 transition-colors hover:border-amber-500/40 hover:text-stone-200"
+                      className="rounded-full border border-stone-700 bg-stone-900 px-3 py-1.5 text-xs text-stone-400 transition-colors hover:border-brand-500/40 hover:text-stone-200"
                     >
                       {l.label}
                     </Link>
@@ -138,7 +138,7 @@ export default function WaitlistPage() {
               <>
                 <div className="mb-8 text-center">
                   <div className="mb-5 flex items-center justify-center gap-2">
-                    <Badge className="border border-amber-500/30 bg-amber-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-amber-400">
+                    <Badge className="border border-brand-500/30 bg-brand-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-brand-400">
                       Beta — Early Access
                     </Badge>
                   </div>
@@ -154,13 +154,13 @@ export default function WaitlistPage() {
                 {/* Perks strip */}
                 <div className="mb-8 rounded-xl border border-stone-800 bg-stone-900/50 p-5">
                   <div className="mb-3 flex items-center gap-2">
-                    <Star className="size-3.5 text-amber-400" />
-                    <p className="text-xs font-semibold uppercase tracking-widest text-amber-400">Founding member access includes</p>
+                    <Star className="size-3.5 text-brand-400" />
+                    <p className="text-xs font-semibold uppercase tracking-widest text-brand-400">Founding member access includes</p>
                   </div>
                   <ul className="space-y-2">
                     {PERKS.map((perk) => (
                       <li key={perk} className="flex items-start gap-2.5 text-sm text-stone-400">
-                        <Check className="mt-0.5 size-3.5 shrink-0 text-amber-400" />
+                        <Check className="mt-0.5 size-3.5 shrink-0 text-brand-400" />
                         {perk}
                       </li>
                     ))}
@@ -171,7 +171,7 @@ export default function WaitlistPage() {
                 <form onSubmit={handleSubmit} className="space-y-3">
                   <div>
                     <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-stone-300">
-                      Email address <span className="text-amber-400">*</span>
+                      Email address <span className="text-brand-400">*</span>
                     </label>
                     <input
                       id="email"
@@ -180,7 +180,7 @@ export default function WaitlistPage() {
                       placeholder="you@example.com"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="h-11 w-full rounded-xl border border-stone-700 bg-stone-900 px-4 text-sm text-stone-100 placeholder:text-stone-500 outline-none transition-colors focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20"
+                      className="h-11 w-full rounded-xl border border-stone-700 bg-stone-900 px-4 text-sm text-stone-100 placeholder:text-stone-500 outline-none transition-colors focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20"
                     />
                   </div>
 
@@ -194,7 +194,7 @@ export default function WaitlistPage() {
                       placeholder="Alex"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      className="h-11 w-full rounded-xl border border-stone-700 bg-stone-900 px-4 text-sm text-stone-100 placeholder:text-stone-500 outline-none transition-colors focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20"
+                      className="h-11 w-full rounded-xl border border-stone-700 bg-stone-900 px-4 text-sm text-stone-100 placeholder:text-stone-500 outline-none transition-colors focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20"
                     />
                   </div>
 
@@ -206,7 +206,7 @@ export default function WaitlistPage() {
                       id="role"
                       value={role}
                       onChange={(e) => setRole(e.target.value)}
-                      className="h-11 w-full rounded-xl border border-stone-700 bg-stone-900 px-4 text-sm text-stone-100 outline-none transition-colors focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 [&>option]:bg-stone-900"
+                      className="h-11 w-full rounded-xl border border-stone-700 bg-stone-900 px-4 text-sm text-stone-100 outline-none transition-colors focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 [&>option]:bg-stone-900"
                     >
                       <option value="">Select one…</option>
                       {ROLES.map((r) => (
@@ -224,7 +224,7 @@ export default function WaitlistPage() {
                   <Button
                     type="submit"
                     disabled={loading}
-                    className="mt-1 h-12 w-full rounded-xl bg-amber-500 text-base font-bold text-stone-950 hover:bg-amber-400 disabled:opacity-60"
+                    className="mt-1 h-12 w-full rounded-xl bg-brand-500 text-base font-bold text-stone-950 hover:bg-brand-400 disabled:opacity-60"
                   >
                     {loading ? (
                       <Loader2 className="mr-2 size-4 animate-spin" />

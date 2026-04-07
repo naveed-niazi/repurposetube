@@ -89,8 +89,8 @@ export const OUTPUT_FORMATS: OutputFormat[] = [
     icon: TrendingUp,
     label: "YouTube SEO Package",
     fullLabel: "YouTube SEO Generator",
-    iconColor: "text-amber-600",
-    iconBg: "bg-amber-50",
+    iconColor: "text-brand-600",
+    iconBg: "bg-brand-50",
     slug: "youtube-seo",
     href: "/youtube-seo-generator",
     description:

@@ -33,8 +33,8 @@ export function BenefitList({ headline, subheadline, benefits }: BenefitListProp
                 key={item.headline}
                 className="rounded-2xl border border-stone-200 bg-white p-6 transition-shadow hover:shadow-md hover:shadow-stone-100"
               >
-                <div className="mb-4 inline-flex size-11 items-center justify-center rounded-xl border border-amber-100 bg-amber-50">
-                  <Icon className="size-5 text-amber-600" />
+                <div className="mb-4 inline-flex size-11 items-center justify-center rounded-xl border border-brand-100 bg-brand-50">
+                  <Icon className="size-5 text-brand-600" />
                 </div>
                 <h3 className="font-heading mb-2 text-base font-bold text-stone-900">
                   {item.headline}

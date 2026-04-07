@@ -119,7 +119,7 @@ export default function BestYouTubeRepurposingToolsPage() {
               <>
                 The Best YouTube Content{" "}
                 <br />
-                <span className="text-amber-400">Repurposing Tools</span> Compared
+                <span className="text-brand-400">Repurposing Tools</span> Compared
               </>
             }
             subheadline="We compared every major YouTube repurposing tool — Castmagic, AutoRepurpose, Exemplary AI, Repurpose.io, and RepurposeTube — on formats covered, workflow, and pricing."
@@ -142,7 +142,7 @@ export default function BestYouTubeRepurposingToolsPage() {
                     key={tool.name}
                     className={`flex gap-5 rounded-2xl border p-5 sm:p-6 ${
                       tool.highlight
-                        ? "border-amber-400 bg-amber-50/40 ring-1 ring-amber-400/20"
+                        ? "border-brand-400 bg-brand-50/40 ring-1 ring-brand-400/20"
                         : "border-stone-200 bg-white"
                     }`}
                   >
@@ -155,7 +155,7 @@ export default function BestYouTubeRepurposingToolsPage() {
                         <span
                           className={`rounded-full px-2 py-0.5 text-xs font-semibold ${
                             tool.highlight
-                              ? "bg-amber-100 text-amber-700"
+                              ? "bg-brand-100 text-brand-700"
                               : "bg-stone-100 text-stone-500"
                           }`}
                         >
@@ -189,7 +189,7 @@ export default function BestYouTubeRepurposingToolsPage() {
               <>
                 The best YouTube repurposing tool{" "}
                 <br />
-                <span className="text-amber-400">is the one you actually use</span>
+                <span className="text-brand-400">is the one you actually use</span>
               </>
             }
             subheadline="Free plan. No credit card. Your first video repurposed in 60 seconds."

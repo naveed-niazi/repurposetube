@@ -31,7 +31,7 @@ export function LandingHero({
     <section className="relative overflow-hidden bg-stone-950 pb-24 pt-24 sm:pt-32">
       {/* Glow */}
       <div className="pointer-events-none absolute inset-0 flex items-start justify-center overflow-hidden">
-        <div className="mt-16 size-[700px] rounded-full bg-amber-500/[0.07] blur-[120px]" />
+        <div className="mt-16 size-[700px] rounded-full bg-brand-500/[0.07] blur-[120px]" />
       </div>
       {/* Dot grid */}
       <div
@@ -43,7 +43,7 @@ export function LandingHero({
       />
 
       <div className="relative mx-auto max-w-4xl px-5 text-center sm:px-8">
-        <Badge className="mb-6 border border-amber-500/30 bg-amber-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-amber-400">
+        <Badge className="mb-6 border border-brand-500/30 bg-brand-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-brand-400">
           {badge}
         </Badge>
 
@@ -61,13 +61,13 @@ export function LandingHero({
         <div className="mx-auto mt-8 inline-flex flex-wrap items-center justify-center gap-4 rounded-xl border border-stone-800 bg-stone-900/60 px-5 py-3 text-sm text-stone-400 sm:gap-6">
           {stats.map((s) => (
             <span key={s.label} className="flex items-center gap-2">
-              <span className="font-heading text-base font-bold text-amber-400 sm:text-lg">{s.value}</span>
+              <span className="font-heading text-base font-bold text-brand-400 sm:text-lg">{s.value}</span>
               {s.label}
             </span>
           ))}
           <span className="hidden h-4 w-px bg-stone-700 sm:block" />
           <span className="flex items-center gap-2">
-            <Check className="size-4 text-amber-400" />
+            <Check className="size-4 text-brand-400" />
             Free to start
           </span>
         </div>

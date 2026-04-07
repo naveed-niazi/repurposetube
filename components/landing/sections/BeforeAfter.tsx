@@ -57,12 +57,12 @@ export function BeforeAfter({
           </div>
 
           {/* With RepurposeTube */}
-          <div className="rounded-2xl border border-amber-500/30 bg-amber-500/[0.07] p-6 sm:p-8">
+          <div className="rounded-2xl border border-brand-500/30 bg-brand-500/[0.07] p-6 sm:p-8">
             <div className="mb-6 flex items-center gap-2">
-              <div className="flex size-6 items-center justify-center rounded-full bg-amber-500/20">
-                <Check className="size-3 text-amber-400" />
+              <div className="flex size-6 items-center justify-center rounded-full bg-brand-500/20">
+                <Check className="size-3 text-brand-400" />
               </div>
-              <span className="font-heading text-xs font-bold uppercase tracking-widest text-amber-500">
+              <span className="font-heading text-xs font-bold uppercase tracking-widest text-brand-500">
                 With RepurposeTube
               </span>
             </div>
@@ -70,21 +70,21 @@ export function BeforeAfter({
               {rows.map((row) => (
                 <div key={row.task} className="flex items-center justify-between gap-4">
                   <span className="text-sm text-stone-300">{row.task}</span>
-                  <span className="flex shrink-0 items-center gap-1.5 text-sm font-medium text-amber-400">
+                  <span className="flex shrink-0 items-center gap-1.5 text-sm font-medium text-brand-400">
                     <Check className="size-3" /> Included
                   </span>
                 </div>
               ))}
             </div>
-            <div className="mt-6 flex items-center justify-between border-t border-amber-500/20 pt-5">
+            <div className="mt-6 flex items-center justify-between border-t border-brand-500/20 pt-5">
               <span className="font-heading text-sm font-bold text-stone-400">Total per video</span>
-              <span className="font-heading text-xl font-extrabold text-amber-400">~60 seconds</span>
+              <span className="font-heading text-xl font-extrabold text-brand-400">~60 seconds</span>
             </div>
           </div>
         </div>
 
         <div className="mt-8 text-center">
-          <Button asChild className="h-11 bg-amber-500 px-7 font-semibold text-stone-950 hover:bg-amber-400">
+          <Button asChild className="h-11 bg-brand-500 px-7 font-semibold text-stone-950 hover:bg-brand-400">
             <Link href={ctaHref}>
               {ctaLabel} <ArrowRight className="ml-2 size-4" />
             </Link>

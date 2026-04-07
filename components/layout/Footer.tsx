@@ -57,7 +57,7 @@ export function Footer() {
           <div className="col-span-2 sm:col-span-3 lg:col-span-1">
             <Link href="/">
               <span className="font-heading text-base font-bold tracking-tight text-stone-100">
-                Repurpose<span className="text-amber-400">Tube</span>
+                Repurpose<span className="text-brand-400">Tube</span>
               </span>
             </Link>
             <p className="mt-2 max-w-[200px] text-xs leading-relaxed text-stone-500">

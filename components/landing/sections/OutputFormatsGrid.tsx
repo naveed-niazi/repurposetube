@@ -40,7 +40,7 @@ export function OutputFormatsGrid({
                 className={cn(
                   "group border shadow-none transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-stone-100",
                   isHighlighted
-                    ? "border-amber-400 ring-1 ring-amber-400/30"
+                    ? "border-brand-400 ring-1 ring-brand-400/30"
                     : "border-stone-200"
                 )}
               >
@@ -51,7 +51,7 @@ export function OutputFormatsGrid({
                   <CardTitle className="font-heading text-base font-bold text-stone-900">
                     {withLinks && !isHighlighted ? f.fullLabel : f.label}
                     {isHighlighted && (
-                      <span className="ml-2 rounded-full bg-amber-100 px-2 py-0.5 text-xs font-semibold text-amber-700">
+                      <span className="ml-2 rounded-full bg-brand-100 px-2 py-0.5 text-xs font-semibold text-brand-700">
                         This page
                       </span>
                     )}

@@ -63,7 +63,7 @@ export default function PricingPage() {
         <section className="relative overflow-hidden bg-stone-950 pb-24 pt-24 sm:pt-32">
           {/* Glow */}
           <div className="pointer-events-none absolute inset-0 flex items-start justify-center overflow-hidden">
-            <div className="mt-20 size-[600px] rounded-full bg-amber-500/8 blur-[120px]" />
+            <div className="mt-20 size-[600px] rounded-full bg-brand-500/8 blur-[120px]" />
           </div>
           {/* Dot grid */}
           <div
@@ -76,7 +76,7 @@ export default function PricingPage() {
 
           <div className="relative mx-auto max-w-3xl px-5 text-center sm:px-8">
             <div className="mb-5 flex items-center justify-center gap-2">
-              <Badge className="border border-amber-500/30 bg-amber-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-amber-400">
+              <Badge className="border border-brand-500/30 bg-brand-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-brand-400">
                 Beta Release
               </Badge>
               <Badge className="border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-emerald-400">
@@ -86,7 +86,7 @@ export default function PricingPage() {
 
             <h1 className="font-heading mb-5 text-[1.75rem] font-extrabold leading-[1.1] tracking-tight text-stone-50 text-balance sm:text-5xl lg:text-6xl">
               You&apos;re Early.{" "}
-              <span className="text-amber-400">That Means Free.</span>
+              <span className="text-brand-400">That Means Free.</span>
             </h1>
 
             <p className="mx-auto mb-4 max-w-xl text-base leading-relaxed text-stone-400 text-pretty sm:text-lg">
@@ -98,7 +98,7 @@ export default function PricingPage() {
 
             <Button
               asChild
-              className="h-12 bg-amber-500 px-8 text-base font-bold text-stone-950 hover:bg-amber-400"
+              className="h-12 bg-brand-500 px-8 text-base font-bold text-stone-950 hover:bg-brand-400"
             >
               <Link href="/waitlist">Get Free Access Now</Link>
             </Button>
@@ -116,10 +116,10 @@ export default function PricingPage() {
               <p className="text-stone-400">This is the complete product — no locked features, no upsell tier.</p>
             </div>
 
-            <div className="rounded-2xl border border-amber-500/20 bg-stone-950 p-8 shadow-2xl shadow-black/40 sm:p-10">
+            <div className="rounded-2xl border border-brand-500/20 bg-stone-950 p-8 shadow-2xl shadow-black/40 sm:p-10">
               <div className="mb-8 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
                 <div>
-                  <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-amber-400">Beta Plan</p>
+                  <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-brand-400">Beta Plan</p>
                   <p className="font-heading text-4xl font-extrabold text-stone-50">
                     $0
                     <span className="ml-1.5 text-lg font-medium text-stone-500">/ month</span>
@@ -128,7 +128,7 @@ export default function PricingPage() {
                 </div>
                 <Button
                   asChild
-                  className="shrink-0 bg-amber-500 px-6 font-bold text-stone-950 hover:bg-amber-400"
+                  className="shrink-0 bg-brand-500 px-6 font-bold text-stone-950 hover:bg-brand-400"
                 >
                   <Link href="/waitlist">Start Free</Link>
                 </Button>
@@ -137,7 +137,7 @@ export default function PricingPage() {
               <div className="grid gap-3 sm:grid-cols-2">
                 {FEATURES.map((feat) => (
                   <div key={feat} className="flex items-start gap-3">
-                    <Check className="mt-0.5 size-4 shrink-0 text-amber-400" />
+                    <Check className="mt-0.5 size-4 shrink-0 text-brand-400" />
                     <span className="text-sm text-stone-300">{feat}</span>
                   </div>
                 ))}
@@ -151,11 +151,11 @@ export default function PricingPage() {
           <div className="mx-auto max-w-4xl px-4 sm:px-6">
             <div className="rounded-2xl border border-stone-800 bg-stone-900/50 p-8 sm:p-10">
               <div className="mb-6 flex items-center gap-3">
-                <div className="flex size-10 items-center justify-center rounded-xl bg-amber-500/10">
-                  <Star className="size-5 text-amber-400" />
+                <div className="flex size-10 items-center justify-center rounded-xl bg-brand-500/10">
+                  <Star className="size-5 text-brand-400" />
                 </div>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-widest text-amber-400">Founding Members</p>
+                  <p className="text-xs font-semibold uppercase tracking-widest text-brand-400">Founding Members</p>
                   <h2 className="font-heading text-xl font-extrabold text-stone-50">Lock in your access before pricing launches</h2>
                 </div>
               </div>
@@ -181,7 +181,7 @@ export default function PricingPage() {
                   },
                 ].map((item) => (
                   <div key={item.title} className="rounded-xl border border-stone-800 bg-stone-950 p-5">
-                    <item.icon className="mb-3 size-5 text-amber-400" />
+                    <item.icon className="mb-3 size-5 text-brand-400" />
                     <p className="mb-1.5 text-sm font-semibold text-stone-100">{item.title}</p>
                     <p className="text-xs leading-relaxed text-stone-500">{item.body}</p>
                   </div>
@@ -213,14 +213,14 @@ export default function PricingPage() {
           <div className="mx-auto max-w-2xl px-4 text-center sm:px-6">
             <h2 className="font-heading mb-4 text-2xl font-extrabold tracking-tight text-stone-50 sm:text-3xl">
               The window is open.{" "}
-              <span className="text-amber-400">Get in while it&apos;s free.</span>
+              <span className="text-brand-400">Get in while it&apos;s free.</span>
             </h2>
             <p className="mx-auto mb-8 max-w-lg text-stone-400">
               Beta access is open right now — no waitlist, no invite code. Sign up and start repurposing your first video in 60 seconds.
             </p>
             <Button
               asChild
-              className="bg-amber-500 px-8 text-base font-bold text-stone-950 hover:bg-amber-400"
+              className="bg-brand-500 px-8 text-base font-bold text-stone-950 hover:bg-brand-400"
             >
               <Link href="/waitlist">Create Your Free Account</Link>
             </Button>

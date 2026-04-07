@@ -79,7 +79,7 @@ export default function CastmagicAlternativePage() {
                 <>
                   The Castmagic Alternative{" "}
                   <br />
-                  <span className="text-amber-400">Built for YouTubers</span>
+                  <span className="text-brand-400">Built for YouTubers</span>
                 </>
               ),
               subheadline:
@@ -94,7 +94,7 @@ export default function CastmagicAlternativePage() {
               <>
                 YouTube-first repurposing,{" "}
                 <br />
-                <span className="text-amber-400">not podcast tools retrofitted</span>
+                <span className="text-brand-400">not podcast tools retrofitted</span>
               </>
             }
           />

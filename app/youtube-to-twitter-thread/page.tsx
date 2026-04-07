@@ -65,7 +65,7 @@ export default function YouTubeToTwitterThreadPage() {
                 <>
                   Turn Any YouTube Video Into{" "}
                   <br />
-                  a <span className="text-amber-400">Viral Twitter Thread</span>
+                  a <span className="text-brand-400">Viral Twitter Thread</span>
                 </>
               ),
               subheadline:
@@ -77,7 +77,7 @@ export default function YouTubeToTwitterThreadPage() {
               <>
                 Your best video ideas deserve{" "}
                 <br />
-                <span className="text-amber-400">an audience on X too</span>
+                <span className="text-brand-400">an audience on X too</span>
               </>
             }
             finalCtaSubheadline="Let Remi turn every video into a thread your followers will share."

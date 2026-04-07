@@ -25,7 +25,7 @@ export function HowItWorks({
         <div className="grid gap-10 sm:grid-cols-3">
           {steps.map((step) => (
             <div key={step.n} className="flex flex-col">
-              <span className="font-heading mb-5 text-6xl font-extrabold leading-none tracking-tight text-amber-400/20">
+              <span className="font-heading mb-5 text-6xl font-extrabold leading-none tracking-tight text-brand-400/20">
                 {step.n}
               </span>
               <h3 className="font-heading mb-2 text-lg font-bold text-stone-900">{step.title}</h3>

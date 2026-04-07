@@ -13,7 +13,7 @@ interface ComparisonTableProps {
 }
 
 function Cell({ value }: { value: boolean | string }) {
-  if (value === true) return <Check className="mx-auto size-5 text-amber-500" />
+  if (value === true) return <Check className="mx-auto size-5 text-brand-500" />
   if (value === false) return <X className="mx-auto size-5 text-stone-500" />
   return <span className="text-sm text-stone-300">{value}</span>
 }
@@ -39,7 +39,7 @@ export function ComparisonTable({
           <div className="grid grid-cols-3 border-b border-stone-800 bg-stone-900 px-6 py-4">
             <div className="text-sm font-semibold text-stone-400">Feature</div>
             <div className="text-center">
-              <span className="font-heading text-sm font-bold text-amber-400">RepurposeTube</span>
+              <span className="font-heading text-sm font-bold text-brand-400">RepurposeTube</span>
             </div>
             <div className="text-center">
               <span className="font-heading text-sm font-bold text-stone-500">{competitorName}</span>

@@ -47,7 +47,7 @@ export default function PrivacyPage() {
         {/* Page header */}
         <div className="border-b border-stone-800 bg-stone-900/60 py-14">
           <div className="mx-auto max-w-3xl px-5 sm:px-8">
-            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-amber-400">Legal</p>
+            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-brand-400">Legal</p>
             <h1 className="font-heading mb-3 text-3xl font-extrabold tracking-tight text-stone-50 sm:text-4xl">
               Privacy Policy
             </h1>
@@ -70,7 +70,7 @@ export default function PrivacyPage() {
             </p>
             <p>
               For privacy matters, contact us at:{" "}
-              <a href="mailto:privacy@repurposetube.com" className="text-amber-400 underline underline-offset-2 hover:text-amber-300">
+              <a href="mailto:privacy@repurposetube.com" className="text-brand-400 underline underline-offset-2 hover:text-brand-300">
                 privacy@repurposetube.com
               </a>
             </p>
@@ -194,7 +194,7 @@ export default function PrivacyPage() {
               <p>California residents have additional rights under the California Consumer Privacy Act, including the right to know what data is collected and the right to opt out of data sale (we do not sell data). To exercise these rights, email privacy@repurposetube.com.</p>
             </Sub>
 
-            <p className="mt-4">To exercise any of these rights, contact us at <a href="mailto:privacy@repurposetube.com" className="text-amber-400 underline underline-offset-2 hover:text-amber-300">privacy@repurposetube.com</a>. We will respond within 30 days.</p>
+            <p className="mt-4">To exercise any of these rights, contact us at <a href="mailto:privacy@repurposetube.com" className="text-brand-400 underline underline-offset-2 hover:text-brand-300">privacy@repurposetube.com</a>. We will respond within 30 days.</p>
           </Section>
 
           <Section title="9. Children's privacy">
@@ -214,7 +214,7 @@ export default function PrivacyPage() {
             <p>For privacy-related questions, data requests, or concerns:</p>
             <p>
               Email:{" "}
-              <a href="mailto:privacy@repurposetube.com" className="text-amber-400 underline underline-offset-2 hover:text-amber-300">
+              <a href="mailto:privacy@repurposetube.com" className="text-brand-400 underline underline-offset-2 hover:text-brand-300">
                 privacy@repurposetube.com
               </a>
             </p>

@@ -104,7 +104,7 @@ export default function ForContentMarketersPage() {
                 <>
                   Turn One YouTube Video Into{" "}
                   <br />
-                  <span className="text-amber-400">a Full Content Campaign</span>
+                  <span className="text-brand-400">a Full Content Campaign</span>
                 </>
               ),
               subheadline:
@@ -118,7 +118,7 @@ export default function ForContentMarketersPage() {
               <>
                 Turn every video into{" "}
                 <br />
-                <span className="text-amber-400">a full campaign in 60 seconds</span>
+                <span className="text-brand-400">a full campaign in 60 seconds</span>
               </>
             }
             finalCtaSubheadline="Free plan. No credit card. Works on your first video today."

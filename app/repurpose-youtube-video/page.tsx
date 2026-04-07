@@ -71,7 +71,7 @@ export default function RepurposeYouTubeVideoPage() {
               <>
                 Repurpose Any YouTube Video Into{" "}
                 <br />
-                <span className="text-amber-400">6 Content Formats</span> in 60 Seconds
+                <span className="text-brand-400">6 Content Formats</span> in 60 Seconds
               </>
             }
             subheadline="One URL. Six platforms worth of content. Blog post, Twitter thread, LinkedIn post, YouTube SEO package, newsletter, and Shorts scripts — all generated in parallel."
@@ -86,7 +86,7 @@ export default function RepurposeYouTubeVideoPage() {
               <>
                 Start repurposing your{" "}
                 <br />
-                <span className="text-amber-400">first video today</span>
+                <span className="text-brand-400">first video today</span>
               </>
             }
           />

@@ -65,7 +65,7 @@ export default function YouTubeToLinkedInPostPage() {
                 <>
                   Turn Any YouTube Video Into{" "}
                   <br />
-                  a <span className="text-amber-400">High-Performing LinkedIn Post</span>
+                  a <span className="text-brand-400">High-Performing LinkedIn Post</span>
                 </>
               ),
               subheadline:
@@ -77,7 +77,7 @@ export default function YouTubeToLinkedInPostPage() {
               <>
                 Your YouTube knowledge belongs{" "}
                 <br />
-                <span className="text-amber-400">on LinkedIn too</span>
+                <span className="text-brand-400">on LinkedIn too</span>
               </>
             }
             finalCtaSubheadline="Let Remi write the post. You just hit publish."

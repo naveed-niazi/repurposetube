@@ -69,7 +69,7 @@ export default function YouTubeToBlogPostPage() {
                 <>
                   Turn Any YouTube Video Into{" "}
                   <br />
-                  a <span className="text-amber-400">Full SEO Blog Post</span>
+                  a <span className="text-brand-400">Full SEO Blog Post</span>
                 </>
               ),
               subheadline:
@@ -81,7 +81,7 @@ export default function YouTubeToBlogPostPage() {
               <>
                 Every video you make is{" "}
                 <br />
-                <span className="text-amber-400">already a blog post</span>
+                <span className="text-brand-400">already a blog post</span>
               </>
             }
             finalCtaSubheadline="Stop leaving SEO traffic on the table. Let Remi write the article for you."

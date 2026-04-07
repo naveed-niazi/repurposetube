@@ -38,7 +38,7 @@ export default function TermsPage() {
         {/* Page header */}
         <div className="border-b border-stone-800 bg-stone-900/60 py-14">
           <div className="mx-auto max-w-3xl px-5 sm:px-8">
-            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-amber-400">Legal</p>
+            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-brand-400">Legal</p>
             <h1 className="font-heading mb-3 text-3xl font-extrabold tracking-tight text-stone-50 sm:text-4xl">
               Terms of Service
             </h1>
@@ -172,7 +172,7 @@ export default function TermsPage() {
               "Founding members (users who sign up during beta) will receive a permanent discount from the public launch pricing, applied automatically to their account",
             ]} />
             <p>
-              If you have questions about future pricing, contact us at <a href="mailto:hello@repurposetube.com" className="text-amber-400 underline underline-offset-2 hover:text-amber-300">hello@repurposetube.com</a>.
+              If you have questions about future pricing, contact us at <a href="mailto:hello@repurposetube.com" className="text-brand-400 underline underline-offset-2 hover:text-brand-300">hello@repurposetube.com</a>.
             </p>
           </Section>
 
@@ -247,7 +247,7 @@ export default function TermsPage() {
               These Terms are governed by and construed in accordance with the laws of the State of Delaware, United States, without regard to its conflict of law provisions.
             </p>
             <p>
-              Before initiating any formal legal proceeding, you agree to first contact us at <a href="mailto:legal@repurposetube.com" className="text-amber-400 underline underline-offset-2 hover:text-amber-300">legal@repurposetube.com</a> and attempt to resolve the dispute informally. Most concerns can be resolved quickly this way.
+              Before initiating any formal legal proceeding, you agree to first contact us at <a href="mailto:legal@repurposetube.com" className="text-brand-400 underline underline-offset-2 hover:text-brand-300">legal@repurposetube.com</a> and attempt to resolve the dispute informally. Most concerns can be resolved quickly this way.
             </p>
             <p>
               Any dispute that cannot be resolved informally shall be submitted to binding arbitration in accordance with the American Arbitration Association rules, unless you are located in a jurisdiction where arbitration clauses are not enforceable, in which case disputes shall be resolved in the courts of Delaware.
@@ -272,11 +272,11 @@ export default function TermsPage() {
 
           <Section title="19. Contact">
             <p>For general enquiries:</p>
-            <p><a href="mailto:hello@repurposetube.com" className="text-amber-400 underline underline-offset-2 hover:text-amber-300">hello@repurposetube.com</a></p>
+            <p><a href="mailto:hello@repurposetube.com" className="text-brand-400 underline underline-offset-2 hover:text-brand-300">hello@repurposetube.com</a></p>
             <p className="mt-2">For legal matters:</p>
-            <p><a href="mailto:legal@repurposetube.com" className="text-amber-400 underline underline-offset-2 hover:text-amber-300">legal@repurposetube.com</a></p>
+            <p><a href="mailto:legal@repurposetube.com" className="text-brand-400 underline underline-offset-2 hover:text-brand-300">legal@repurposetube.com</a></p>
             <p className="mt-2">For privacy matters:</p>
-            <p><a href="mailto:privacy@repurposetube.com" className="text-amber-400 underline underline-offset-2 hover:text-amber-300">privacy@repurposetube.com</a></p>
+            <p><a href="mailto:privacy@repurposetube.com" className="text-brand-400 underline underline-offset-2 hover:text-brand-300">privacy@repurposetube.com</a></p>
           </Section>
 
         </div>

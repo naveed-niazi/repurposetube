@@ -31,12 +31,12 @@ export function CompareTeaser() {
               <Link
                 key={t.href}
                 href={t.href}
-                className="group flex items-center gap-2 rounded-full border border-stone-200 bg-white px-4 py-2 text-sm text-stone-600 shadow-sm transition-all hover:border-amber-300 hover:text-stone-900 hover:shadow-md"
+                className="group flex items-center gap-2 rounded-full border border-stone-200 bg-white px-4 py-2 text-sm text-stone-600 shadow-sm transition-all hover:border-brand-300 hover:text-stone-900 hover:shadow-md"
               >
                 <span className="font-medium">{t.name}</span>
                 <span className="text-stone-400">·</span>
                 <span className="text-stone-400">{t.note}</span>
-                <ArrowRight className="size-3.5 text-stone-400 transition-transform group-hover:translate-x-0.5 group-hover:text-amber-500" />
+                <ArrowRight className="size-3.5 text-stone-400 transition-transform group-hover:translate-x-0.5 group-hover:text-brand-500" />
               </Link>
             ))}
           </div>
@@ -44,7 +44,7 @@ export function CompareTeaser() {
           <Link
             href="/best-youtube-repurposing-tools"
             title="Best YouTube Content Repurposing Tools — Full Comparison 2025"
-            className="flex items-center gap-2 text-sm font-semibold text-amber-600 underline-offset-4 hover:text-amber-500 hover:underline"
+            className="flex items-center gap-2 text-sm font-semibold text-brand-600 underline-offset-4 hover:text-brand-500 hover:underline"
           >
             Compare all YouTube repurposing tools in 2025 →
           </Link>

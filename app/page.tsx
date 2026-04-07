@@ -79,7 +79,7 @@ export default function HomePage() {
               <>
                 One YouTube Video.{" "}
                 <br />
-                <span className="text-amber-400">Six Content Formats.</span>{" "}
+                <span className="text-brand-400">Six Content Formats.</span>{" "}
                 <br />
                 Sixty Seconds.
               </>

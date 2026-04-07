@@ -38,7 +38,7 @@ export function Navbar({ variant = "home" }: NavbarProps) {
             className="shrink-0"
           />
           <span className="font-heading text-lg font-bold tracking-tight text-stone-100">
-            Repurpose<span className="text-amber-400">Tube</span>
+            Repurpose<span className="text-brand-500">Tube</span>
           </span>
         </Link>
 
@@ -68,7 +68,7 @@ export function Navbar({ variant = "home" }: NavbarProps) {
               <div className="mt-1 border-t border-stone-800 pt-1">
                 <Link
                   href="/repurpose-youtube-video"
-                  className="block rounded-lg px-3 py-2 text-sm font-medium text-amber-400 transition-colors hover:bg-stone-800"
+                  className="block rounded-lg px-3 py-2 text-sm font-medium text-brand-400 transition-colors hover:bg-stone-800"
                 >
                   All outputs overview →
                 </Link>
@@ -133,7 +133,7 @@ export function Navbar({ variant = "home" }: NavbarProps) {
           <Button
             size="sm"
             asChild
-            className="bg-amber-500 font-semibold text-stone-950 hover:bg-amber-400"
+            className="bg-brand-500 font-semibold text-stone-950 hover:bg-brand-400"
           >
             <Link href="/waitlist">Get Started Free</Link>
           </Button>

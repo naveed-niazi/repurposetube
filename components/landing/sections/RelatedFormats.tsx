@@ -22,10 +22,10 @@ export function RelatedFormats({ currentSlug }: RelatedFormatsProps) {
               key={f.slug}
               href={f.href}
               title={`${f.fullLabel} Generator — RepurposeTube`}
-              className="group flex items-center gap-1.5 rounded-full border border-stone-200 bg-stone-50 px-4 py-2 text-sm font-medium text-stone-700 transition-all hover:border-amber-300 hover:bg-amber-50/50 hover:text-stone-900 hover:shadow-sm"
+              className="group flex items-center gap-1.5 rounded-full border border-stone-200 bg-stone-50 px-4 py-2 text-sm font-medium text-stone-700 transition-all hover:border-brand-300 hover:bg-brand-50/50 hover:text-stone-900 hover:shadow-sm"
             >
               {f.fullLabel}
-              <ArrowRight className="size-3.5 text-stone-400 transition-transform group-hover:translate-x-0.5 group-hover:text-amber-500" />
+              <ArrowRight className="size-3.5 text-stone-400 transition-transform group-hover:translate-x-0.5 group-hover:text-brand-500" />
             </Link>
           ))}
         </div>

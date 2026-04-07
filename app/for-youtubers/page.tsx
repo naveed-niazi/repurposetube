@@ -104,7 +104,7 @@ export default function ForYouTubersPage() {
                 <>
                   More Platforms. Same Video.{" "}
                   <br />
-                  <span className="text-amber-400">No Extra Work.</span>
+                  <span className="text-brand-400">No Extra Work.</span>
                 </>
               ),
               subheadline:
@@ -118,7 +118,7 @@ export default function ForYouTubersPage() {
               <>
                 Your next video is already{" "}
                 <br />
-                <span className="text-amber-400">6 pieces of content</span>
+                <span className="text-brand-400">6 pieces of content</span>
               </>
             }
             finalCtaSubheadline="Let Remi write them. Free to start."

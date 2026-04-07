@@ -65,7 +65,7 @@ export default function YouTubeToShortsScriptPage() {
                 <>
                   Turn One Long Video Into{" "}
                   <br />
-                  <span className="text-amber-400">3 Shorts Scripts</span> Instantly
+                  <span className="text-brand-400">3 Shorts Scripts</span> Instantly
                 </>
               ),
               subheadline:
@@ -77,7 +77,7 @@ export default function YouTubeToShortsScriptPage() {
               <>
                 Your long videos are hiding{" "}
                 <br />
-                <span className="text-amber-400">viral Shorts inside them</span>
+                <span className="text-brand-400">viral Shorts inside them</span>
               </>
             }
             finalCtaSubheadline="Let Remi find them and write the scripts for you."

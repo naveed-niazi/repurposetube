@@ -29,8 +29,8 @@ export function DifferentiatorGrid({
             const Icon = item.icon
             return (
               <div key={item.title} className="flex gap-4">
-                <div className="mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-lg border border-amber-100 bg-amber-50">
-                  <Icon className="size-4 text-amber-600" />
+                <div className="mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-lg border border-brand-100 bg-brand-50">
+                  <Icon className="size-4 text-brand-600" />
                 </div>
                 <div>
                   <h3 className="font-heading mb-1.5 text-sm font-bold text-stone-900">{item.title}</h3>

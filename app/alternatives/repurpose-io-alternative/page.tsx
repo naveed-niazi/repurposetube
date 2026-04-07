@@ -74,7 +74,7 @@ export default function RepurposeIoAlternativePage() {
                 <>
                   Repurpose.io Moves Your Video.{" "}
                   <br />
-                  <span className="text-amber-400">RepurposeTube Writes Your Content.</span>
+                  <span className="text-brand-400">RepurposeTube Writes Your Content.</span>
                 </>
               ),
               subheadline:
@@ -89,7 +89,7 @@ export default function RepurposeIoAlternativePage() {
               <>
                 Get the written content{" "}
                 <br />
-                <span className="text-amber-400">your videos deserve</span>
+                <span className="text-brand-400">your videos deserve</span>
               </>
             }
           />

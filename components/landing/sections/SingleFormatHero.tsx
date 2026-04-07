@@ -23,7 +23,7 @@ export function SingleFormatHero({
     <section className="relative overflow-hidden bg-stone-950 pb-20 pt-20 sm:pt-28">
       {/* Glow */}
       <div className="pointer-events-none absolute inset-0 flex items-start justify-center overflow-hidden">
-        <div className="mt-10 size-[600px] rounded-full bg-amber-500/[0.07] blur-[100px]" />
+        <div className="mt-10 size-[600px] rounded-full bg-brand-500/[0.07] blur-[100px]" />
       </div>
       {/* Dot grid */}
       <div
@@ -35,7 +35,7 @@ export function SingleFormatHero({
       />
 
       <div className="relative mx-auto max-w-3xl px-5 text-center sm:px-8">
-        <Badge className="mb-6 border border-amber-500/30 bg-amber-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-amber-400">
+        <Badge className="mb-6 border border-brand-500/30 bg-brand-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-brand-400">
           {badge}
         </Badge>
 
@@ -55,7 +55,7 @@ export function SingleFormatHero({
 
         <Button
           asChild
-          className="h-12 bg-amber-500 px-7 text-base font-bold text-stone-950 hover:bg-amber-400"
+          className="h-12 bg-brand-500 px-7 text-base font-bold text-stone-950 hover:bg-brand-400"
         >
           <Link href={ctaHref}>
             {ctaLabel} <ArrowRight className="ml-2 size-4" />

@@ -79,7 +79,7 @@ export default function AutoRepurposeAlternativePage() {
                 <>
                   AutoRepurpose Does 3 Formats.{" "}
                   <br />
-                  <span className="text-amber-400">RepurposeTube Does 6.</span>
+                  <span className="text-brand-400">RepurposeTube Does 6.</span>
                 </>
               ),
               subheadline:
@@ -94,7 +94,7 @@ export default function AutoRepurposeAlternativePage() {
               <>
                 Get all 6 formats,{" "}
                 <br />
-                <span className="text-amber-400">not just 3</span>
+                <span className="text-brand-400">not just 3</span>
               </>
             }
           />

@@ -65,7 +65,7 @@ export default function YouTubeToNewsletterPage() {
                 <>
                   Turn Your YouTube Video Into a{" "}
                   <br />
-                  <span className="text-amber-400">Ready-to-Send Newsletter</span>
+                  <span className="text-brand-400">Ready-to-Send Newsletter</span>
                 </>
               ),
               subheadline:
@@ -77,7 +77,7 @@ export default function YouTubeToNewsletterPage() {
               <>
                 Never stare at a blank{" "}
                 <br />
-                <span className="text-amber-400">newsletter draft</span> again
+                <span className="text-brand-400">newsletter draft</span> again
               </>
             }
             finalCtaSubheadline="Every video you publish is already a newsletter issue. Let Remi write it."

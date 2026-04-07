@@ -104,7 +104,7 @@ export default function ForSolopreneursPage() {
                 <>
                   A Content Team You Can&apos;t Afford.{" "}
                   <br />
-                  <span className="text-amber-400">In 60 Seconds.</span>
+                  <span className="text-brand-400">In 60 Seconds.</span>
                 </>
               ),
               subheadline:
@@ -118,7 +118,7 @@ export default function ForSolopreneursPage() {
               <>
                 Stop writing content.{" "}
                 <br />
-                <span className="text-amber-400">Start repurposing it.</span>
+                <span className="text-brand-400">Start repurposing it.</span>
               </>
             }
             finalCtaSubheadline="Free plan. No credit card. Your first video repurposed in 60 seconds."
