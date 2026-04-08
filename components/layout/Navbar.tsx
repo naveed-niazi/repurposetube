@@ -128,14 +128,14 @@ export function Navbar({ variant = "home" }: NavbarProps) {
             asChild
             className="text-stone-300 hover:bg-stone-800 hover:text-stone-100"
           >
-            <Link href="/waitlist">Log in</Link>
+            <Link href="/login">Log in</Link>
           </Button>
           <Button
             size="sm"
             asChild
             className="bg-brand-500 font-semibold text-stone-950 hover:bg-brand-400"
           >
-            <Link href="/waitlist">Get Started Free</Link>
+            <Link href="/signup">Get Started Free</Link>
           </Button>
         </div>
       </div>
