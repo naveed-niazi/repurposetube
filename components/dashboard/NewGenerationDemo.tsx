@@ -28,48 +28,26 @@ type GeneratedDemoData = {
   videoId: string
   title: string
   channel: string
-  thumbnailUrl: string
   transcriptText: string
   transcriptWordCount: number
   transcriptSegmentsCount: number
   outputs: OutputCardItem[]
 }
 
-const STEP_LABELS = ["Fetching transcript", "Analyzing source", "Generating outputs", "Done"]
-
-const TITLES = [
-  "How to Turn One Video into a Week of Content",
-  "The Creator Workflow That Cuts Content Time by 60%",
-  "YouTube Repurposing Playbook for Consistent Growth",
-  "From Transcript to Distribution: A Practical Content System",
-]
-
-const CHANNELS = ["Creator Sprint", "RepurposeTube Lab", "Growth Mechanics", "Modern Creator Ops"]
-
-function buildOutputData(title: string, transcriptText: string): OutputCardItem[] {
-  const trimmedTranscript = transcriptText.trim()
-  const excerpt = trimmedTranscript.slice(0, 380)
-  const cleanExcerpt = excerpt.length > 0 ? excerpt : "Transcript excerpt unavailable."
-
-  return {
-    outputs: [
-      { title: "Blog Post", sample: `${title}\n\n${cleanExcerpt}\n\n[Blog structure will be generated from transcript.]` },
-      { title: "Twitter/X Thread", sample: `Hook:\n${cleanExcerpt.slice(0, 220)}\n\n[Thread draft will be generated from transcript.]` },
-      { title: "LinkedIn Post", sample: `${cleanExcerpt}\n\n[LinkedIn post draft will be generated from transcript.]` },
-      { title: "YouTube SEO Package", sample: `Primary context:\n${cleanExcerpt.slice(0, 220)}\n\n[SEO title/description/tags will be generated from transcript.]` },
-      { title: "Newsletter Email", sample: `${cleanExcerpt}\n\n[Newsletter version will be generated from transcript.]` },
-      { title: "Shorts Scripts", sample: `${cleanExcerpt}\n\n[Three Shorts scripts will be generated from transcript.]` },
-    ],
-  }.outputs
+type NewGenerationDemoProps = {
+  initialResult?: GeneratedDemoData | null
+  initialError?: string | null
 }
 
-export function NewGenerationDemo() {
-  const [inputUrl, setInputUrl] = useState("")
-  const [state, setState] = useState<DemoState>("idle")
-  const [error, setError] = useState<string | null>(null)
+const STEP_LABELS = ["Fetching transcript", "Analyzing source", "Generating outputs", "Done"]
+
+export function NewGenerationDemo({ initialResult = null, initialError = null }: NewGenerationDemoProps) {
+  const [inputUrl, setInputUrl] = useState(initialResult?.url ?? "")
+  const [state, setState] = useState<DemoState>(initialResult ? "success" : initialError ? "error" : "idle")
+  const [error, setError] = useState<string | null>(initialError)
   const [activeStep, setActiveStep] = useState(0)
-  const [result, setResult] = useState<GeneratedDemoData | null>(null)
-  const [activeOutputTitle, setActiveOutputTitle] = useState<string>("")
+  const [result, setResult] = useState<GeneratedDemoData | null>(initialResult)
+  const [activeOutputTitle, setActiveOutputTitle] = useState<string>(initialResult?.outputs[0]?.title ?? "")
   const stepIntervalRef = useRef<number | null>(null)
   const finishTimeoutRef = useRef<number | null>(null)
 
@@ -116,7 +94,7 @@ export function NewGenerationDemo() {
 
       finishTimeoutRef.current = window.setTimeout(async () => {
         try {
-          const response = await fetch("/api/transcript", {
+          const response = await fetch("/api/generate", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -137,6 +115,10 @@ export function NewGenerationDemo() {
                 text?: string
                 wordCount?: number
               }
+              outputs?: Array<{
+                title?: string
+                content?: string
+              }>
             }
             meta?: {
               segmentsCount?: number
@@ -146,24 +128,33 @@ export function NewGenerationDemo() {
             }
           }
 
-          if (!response.ok || !payload.data?.video || !payload.data?.transcript?.text) {
-            throw new Error(payload.error?.message ?? "Could not fetch transcript for this video.")
+          if (!response.ok || !payload.data?.video || !payload.data?.transcript?.text || !payload.data.outputs?.length) {
+            throw new Error(payload.error?.message ?? "Could not generate outputs for this video.")
           }
 
           const video = payload.data.video
           const transcript = payload.data.transcript
           const transcriptText = transcript.text ?? ""
+          const outputs: OutputCardItem[] = payload.data.outputs
+            .map((output) => ({
+              title: String(output.title ?? "").trim(),
+              sample: String(output.content ?? "").trim(),
+            }))
+            .filter((output) => output.title.length > 0 && output.sample.length > 0)
+
+          if (outputs.length === 0) {
+            throw new Error("Generation returned empty outputs.")
+          }
 
           const generated: GeneratedDemoData = {
             url: video.url ?? url,
             videoId: video.id ?? "unknown",
-            title: video.title ?? TITLES[0],
-            channel: video.channel ?? CHANNELS[0],
-            thumbnailUrl: video.thumbnailUrl ?? "",
+            title: video.title ?? "YouTube Video",
+            channel: video.channel ?? "YouTube",
             transcriptText,
             transcriptWordCount: transcript.wordCount ?? transcriptText.split(/\s+/).filter(Boolean).length,
             transcriptSegmentsCount: payload.meta?.segmentsCount ?? 0,
-            outputs: buildOutputData(video.title ?? TITLES[0], transcriptText),
+            outputs,
           }
 
           clearTimers()
@@ -186,7 +177,7 @@ export function NewGenerationDemo() {
   )
 
   return (
-    <div className="space-y-4">
+    <div className="flex h-full min-h-0 flex-col gap-4">
       <Card className="border-stone-800 bg-stone-900/80 text-stone-100">
         <CardContent className="space-y-2 pt-4">
           <form onSubmit={handleSubmit} className="flex flex-col gap-2 sm:flex-row">
@@ -251,23 +242,8 @@ export function NewGenerationDemo() {
 
       {state === "success" && result && (
         <>
-          <Card className="border-stone-800 bg-stone-900/80 text-stone-100">
-            <CardHeader className="space-y-1">
-              <CardTitle className="text-base">{result.title}</CardTitle>
-              <CardDescription className="text-stone-400">
-                {result.channel} • {result.transcriptWordCount.toLocaleString()} words • {result.transcriptSegmentsCount} segments
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="rounded-lg border border-stone-800 bg-stone-950/70 p-3 text-sm leading-relaxed text-stone-300">
-                {result.transcriptText.slice(0, 900)}
-                {result.transcriptText.length > 900 ? "..." : ""}
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="border-stone-800 bg-stone-900/80 text-stone-100">
-            <CardContent className="space-y-4">
+          <Card className="flex min-h-0 flex-1 flex-col border-stone-800 bg-stone-900/80 text-stone-100">
+            <CardContent className="flex min-h-0 flex-1 flex-col space-y-4">
               <div className="grid w-full grid-cols-6 gap-1 rounded-xl border border-stone-800 bg-stone-950/70 p-1">
                 {result.outputs.map((output) => {
                   const active = output.title === activeOutputTitle
@@ -299,8 +275,8 @@ export function NewGenerationDemo() {
                 if (!selected) return null
 
                 return (
-                  <div className="space-y-3">
-                    <div className="rounded-lg border border-stone-800 bg-stone-950/70 p-3">
+                  <div className="flex min-h-0 flex-1 flex-col space-y-3">
+                    <div className="flex min-h-0 flex-1 flex-col rounded-lg border border-stone-800 bg-stone-950/70 p-3">
                       <div className="mb-2 flex items-center justify-between gap-2">
                         <p className="text-sm font-medium text-stone-100">{selected.title}</p>
                         <div className="flex items-center gap-1">
@@ -333,8 +309,8 @@ export function NewGenerationDemo() {
                           </Button>
                         </div>
                       </div>
-                      <div className="max-h-72 overflow-y-auto text-sm leading-relaxed text-stone-300">
-                        {selected.sample}
+                      <div className="min-h-0 flex-1 overflow-y-auto pr-1 text-sm leading-relaxed text-stone-300 [scrollbar-color:rgb(68_64_60)_rgb(17_17_17)] [scrollbar-width:thin] [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-stone-700/80 [&::-webkit-scrollbar-track]:bg-stone-950/70 [&::-webkit-scrollbar]:w-1.5">
+                        {renderFormattedOutput(selected.sample)}
                       </div>
                     </div>
                   </div>
@@ -378,4 +354,129 @@ function getOutputTabLabel(title: string) {
     default:
       return title
   }
+}
+
+function renderFormattedOutput(content: string) {
+  const lines = content.replace(/\r\n/g, "\n").split("\n")
+  const blocks: Array<
+    | { type: "spacer"; key: string }
+    | { type: "heading"; key: string; text: string }
+    | { type: "paragraph"; key: string; text: string }
+    | { type: "ul"; key: string; items: string[] }
+    | { type: "ol"; key: string; items: string[] }
+  > = []
+
+  let index = 0
+  while (index < lines.length) {
+    const rawLine = lines[index] ?? ""
+    const line = rawLine.trim()
+
+    if (!line) {
+      blocks.push({ type: "spacer", key: `spacer-${index}` })
+      index += 1
+      continue
+    }
+
+    if (/^#{1,6}\s+/.test(line)) {
+      blocks.push({
+        type: "heading",
+        key: `heading-${index}`,
+        text: stripInlineMarkdown(line.replace(/^#{1,6}\s+/, "")),
+      })
+      index += 1
+      continue
+    }
+
+    if (/^[-*]\s+/.test(line)) {
+      const items: string[] = []
+      while (index < lines.length) {
+        const listLine = (lines[index] ?? "").trim()
+        if (!/^[-*]\s+/.test(listLine)) break
+        items.push(stripInlineMarkdown(listLine.replace(/^[-*]\s+/, "")))
+        index += 1
+      }
+      blocks.push({ type: "ul", key: `ul-${index}`, items })
+      continue
+    }
+
+    if (/^\d+\.\s+/.test(line)) {
+      const items: string[] = []
+      while (index < lines.length) {
+        const listLine = (lines[index] ?? "").trim()
+        if (!/^\d+\.\s+/.test(listLine)) break
+        items.push(stripInlineMarkdown(listLine.replace(/^\d+\.\s+/, "")))
+        index += 1
+      }
+      blocks.push({ type: "ol", key: `ol-${index}`, items })
+      continue
+    }
+
+    const paragraphLines: string[] = [stripInlineMarkdown(line)]
+    index += 1
+    while (index < lines.length) {
+      const paragraphCandidate = (lines[index] ?? "").trim()
+      if (
+        !paragraphCandidate ||
+        /^#{1,6}\s+/.test(paragraphCandidate) ||
+        /^[-*]\s+/.test(paragraphCandidate) ||
+        /^\d+\.\s+/.test(paragraphCandidate)
+      ) {
+        break
+      }
+
+      paragraphLines.push(stripInlineMarkdown(paragraphCandidate))
+      index += 1
+    }
+
+    blocks.push({
+      type: "paragraph",
+      key: `paragraph-${index}`,
+      text: paragraphLines.join(" "),
+    })
+  }
+
+  return (
+    <div className="space-y-2">
+      {blocks.map((block) => {
+        if (block.type === "spacer") return <div key={block.key} className="h-1.5" aria-hidden="true" />
+        if (block.type === "heading") return <p key={block.key} className="font-medium text-stone-100">{block.text}</p>
+        if (block.type === "paragraph") {
+          return (
+            <p key={block.key} className="whitespace-pre-wrap wrap-break-word text-stone-300">
+              {block.text}
+            </p>
+          )
+        }
+        if (block.type === "ul") {
+          return (
+            <ul key={block.key} className="list-disc space-y-1 pl-5 text-stone-300">
+              {block.items.map((item, itemIndex) => (
+                <li key={`${block.key}-item-${itemIndex}`} className="wrap-break-word">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          )
+        }
+
+        return (
+          <ol key={block.key} className="list-decimal space-y-1 pl-5 text-stone-300">
+            {block.items.map((item, itemIndex) => (
+              <li key={`${block.key}-item-${itemIndex}`} className="wrap-break-word">
+                {item}
+              </li>
+            ))}
+          </ol>
+        )
+      })}
+    </div>
+  )
+}
+
+function stripInlineMarkdown(input: string) {
+  return input
+    .replace(/\*\*(.+?)\*\*/g, "$1")
+    .replace(/__(.+?)__/g, "$1")
+    .replace(/`(.+?)`/g, "$1")
+    .replace(/\[(.+?)\]\((.+?)\)/g, "$1")
 }

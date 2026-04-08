@@ -20,7 +20,7 @@ function sanitizeNextPath(nextPath: FormDataEntryValue | null, fallback = "/dash
 
 async function getRequestSiteUrl() {
   const envSiteUrl = getSiteUrl()
-  if (envSiteUrl !== "http://localhost:3000") return envSiteUrl
+  if (envSiteUrl !== "http://localhost:3003") return envSiteUrl
 
   const headerStore = await headers()
   const forwardedHost = headerStore.get("x-forwarded-host")

@@ -1,4 +1,6 @@
 import { NextResponse } from "next/server"
+import { generateAllOutputs } from "@/lib/ai/generate"
+import { saveGenerationRun } from "@/lib/db/generation-runs"
 import { createSupabaseServerClient } from "@/lib/supabase/server"
 import { fetchTranscriptForUrl, TranscriptFetchError } from "@/lib/transcript/fetch-transcript"
 
@@ -28,15 +30,49 @@ export async function POST(request: Request) {
   const { url } = body as Record<string, unknown>
   const normalizedUrl = typeof url === "string" ? url.trim() : ""
 
+  if (!normalizedUrl) {
+    return NextResponse.json(
+      {
+        error: {
+          code: "INVALID_INPUT",
+          message: "A YouTube URL is required.",
+        },
+      },
+      { status: 400 }
+    )
+  }
+
   try {
     const transcriptData = await fetchTranscriptForUrl(normalizedUrl)
+
+    const generated = await generateAllOutputs({
+      videoTitle: transcriptData.video.title,
+      videoUrl: transcriptData.video.url,
+      transcriptText: transcriptData.transcript.text,
+    })
+
+    const generationId = await saveGenerationRun({
+      userId: user.id,
+      inputUrl: normalizedUrl,
+      transcriptData,
+      outputs: generated.outputs,
+      provider: generated.provider,
+      model: generated.model,
+    })
+
     return NextResponse.json(
       {
         data: {
           video: transcriptData.video,
           transcript: transcriptData.transcript,
+          outputs: generated.outputs,
         },
-        meta: transcriptData.meta,
+        meta: {
+          ...transcriptData.meta,
+          provider: generated.provider,
+          model: generated.model,
+          generationId,
+        },
       },
       { status: 200 }
     )
@@ -53,12 +89,12 @@ export async function POST(request: Request) {
       )
     }
 
-    console.error("[transcript] unexpected error", error)
+    console.error("[generate] provider error", error)
     return NextResponse.json(
       {
         error: {
-          code: "SERVER_ERROR",
-          message: "Could not fetch transcript right now. Please try again.",
+          code: "GENERATION_OR_STORAGE_FAILED",
+          message: "Could not generate or save outputs right now. Please try again.",
         },
       },
       { status: 500 }

@@ -27,7 +27,9 @@ export function DashboardShell({ userEmail, children }: DashboardShellProps) {
 
         <div className="flex min-w-0 flex-1 flex-col gap-4 lg:h-full lg:min-h-0 lg:rounded-2xl lg:border lg:border-stone-800/90 lg:bg-stone-900/70 lg:p-3 lg:backdrop-blur-sm">
           <DashboardHeader userEmail={userEmail} />
-          <section className="min-w-0 pb-4 lg:h-0 lg:min-h-0 lg:flex-1 lg:overflow-y-auto lg:pr-1 lg:pb-0">{children}</section>
+          <section className="min-w-0 pb-4 [scrollbar-color:rgb(68_64_60)_rgb(17_17_17)] [scrollbar-width:thin] [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-stone-700/80 [&::-webkit-scrollbar-track]:bg-stone-950/70 [&::-webkit-scrollbar]:w-1.5 lg:h-0 lg:min-h-0 lg:flex-1 lg:overflow-y-auto lg:pr-1 lg:pb-0">
+            {children}
+          </section>
         </div>
       </div>
 

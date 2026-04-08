@@ -16,3 +16,48 @@ model Waitlist {
 
   @@map("waitlist")
 }
+
+enum GenerationStatus {
+  completed
+  failed
+}
+
+model GenerationRun {
+  id                      String            @id @default(cuid())
+  userId                  String
+  status                  GenerationStatus  @default(completed)
+  inputUrl                String
+  videoId                 String
+  videoUrl                String
+  videoTitle              String
+  videoChannel            String
+  videoThumbnailUrl       String?
+  transcriptText          String
+  transcriptWordCount     Int
+  transcriptSegmentsCount Int
+  provider                String
+  model                   String
+  outputs                 GenerationOutput[]
+  createdAt               DateTime          @default(now())
+  updatedAt               DateTime          @updatedAt
+
+  @@index([userId, createdAt(sort: Desc)])
+  @@index([userId, status, createdAt(sort: Desc)])
+  @@index([videoId])
+  @@map("generation_runs")
+}
+
+model GenerationOutput {
+  id              String        @id @default(cuid())
+  generationRunId String
+  type            String
+  title           String
+  content         String
+  generationRun   GenerationRun @relation(fields: [generationRunId], references: [id])
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+
+  @@index([generationRunId])
+  @@index([type])
+  @@map("generation_outputs")
+}

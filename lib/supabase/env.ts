@@ -21,5 +21,5 @@ export function getSupabaseEnv() {
 export function getSiteUrl() {
   const siteUrl = readEnv("NEXT_PUBLIC_SITE_URL")
   if (siteUrl) return siteUrl.replace(/\/$/, "")
-  return "http://localhost:3000"
+  return "http://localhost:3003"
 }
